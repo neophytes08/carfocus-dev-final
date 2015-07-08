@@ -1,0 +1,299 @@
+<div class="main-wrapper col-lg-12">
+    <h1 class="page-header">Add Items</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="content">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="remove-margin">Inventory Items</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-info">
+                           <div class="row">
+                               <div class="col-md-12 form-inline">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                           <span style="margin-right: 20px;">Select category for items to be added</span>
+                                            <select 
+                                                class="form-control" 
+                                                id="inventory-category" 
+                                                style="margin-top:15px;" 
+                                                ng-model="category.list" 
+                                                ng-options="list.category for list in lists"
+                                                ng-change="showCategoryForm(category.list)">
+                                            </select>
+
+
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="text-right">
+                                                <h6 class="remove-margin">Date of Transaction: <span class="text-primary"><%= DateTime.now.strftime('%B %d, %Y') %></span></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="form-categories">
+                               <div class="row">
+                                    <!-- form-on-stock -->
+                                    <div class="col-md-12 form-wrapper form-on-stock">
+                                        <div class="col-md-12 remove-side-padding">
+                                             <form class="row overflow" ng-submit="addToBasketStock()">
+                                                <div class="form-group" style="margin-bottom: 15px;overflow:hidden">
+                                                    <div class="col-md-12">
+                                                        <input type="hidden" ng-model="inventoryData.transaction_date" ng-init="inventoryData.transaction_date = '<%= Date.today.to_s %>'">
+                                                        
+                                                        <label>Product Name</label>
+                                                        <input type="text" class="form-control" ng-model="inventoryData.product_name" required>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label>Price (Per Item)</label>
+                                                        <input step="any" type="number" class="form-control" ng-model="inventoryData.price" required>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label>Quantity</label>
+                                                        <input step="any" type="number" class="form-control" ng-model="inventoryData.quantity" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group overflow">
+                                                        <label>Type</label>
+                                                        <div class="col-md-12">
+                                                            <div class="radio inline-block">
+                                                                <label style="margin-right: 20px;">
+                                                                    <input name="category" type="radio" value="WholeSale" ng-model="inventoryData.product_type" value="Wholesale" required>
+                                                                    Wholesale
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio inline-block">
+                                                                <label>
+                                                                    <input name="category" type="radio" value="Retail" ng-model="inventoryData.product_type" value="Retail" required>
+                                                                    Retail
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>   
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Product Details</label>
+                                                        <textarea class="form-control" rows="5" ng-model="inventoryData.product_details"></textarea>
+                                                    </div>
+                                                    <div class="remove-padding-left text-right">
+                                                        <div class="form-group overflow">
+                                                            <button class="btn btn-info" type="submit">Add Product</button>
+                                                        </div>   
+                                                    </div>  
+                                                </div>                                  
+                                            </form>
+                                        </div>
+                                   </div>
+                                   <!-- form-direct-purchase -->
+                                   <div class="col-md-12 form-wrapper form-direct-purchase" hidden>
+                                       <div class="direct-purchase-fields">
+                                           <form ng-submit="addToBasketDirPurch()">
+                                                <input type="hidden" ng-model="inventoryData.transaction_date" ng-init="inventoryData.transaction_date = '<%= Date.today.to_s %>'">
+                                               <div class="form-group">
+                                                   <label>O.R Number</label>
+                                                   <input type="text" class="form-control" ng-model="inventoryData.or_no" required>
+                                               </div>
+                                               <div class="form-group row">
+                                                    <div class="col-md-6">
+                                                       <label>Personnel in charge</label>
+                                                       <input type="text" ng-model="inventoryData.in_charge"  class="form-control" required>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                       <input step="any" type="number" class="form-control" ng-model="inventoryData.cash_on_hand" placeholder="Cash on hand" style="margin-top:25px;"required>
+                                                    </div>
+                                               </div>
+                                               <div class="form-group">
+                                                   <label>Store</label>
+                                                   <input type="text" ng-model="inventoryData.store_name" class="form-control" required>
+                                               </div>
+                                               <div class="form-group row">
+                                                    <div class="col-md-4">
+                                                        <label>Product</label>
+                                                        <input type="text" ng-model="inventoryData.product_name" class="form-control" required>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Quantity</label>
+                                                        <input step="any" type="number" ng-model="inventoryData.quantity" class="form-control" required>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Price (Per Item)</label>
+                                                        <input step="any" type="number" ng-model="inventoryData.price" class="form-control" required>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label>Product Details</label>
+                                                        <textarea class="form-control" rows="5" ng-model="inventoryData.product_details"></textarea>
+                                                    </div>
+                                               </div>
+                                               <div class="btn-add-new text-right margin-btm-md">
+                                                   <button class="btn btn-info">Add New Purchase</button>
+                                               </div>
+                                           </form>
+                                       </div>
+                                   </div>
+
+
+                                   <!-- form-product-order -->
+                                   <div class="col-md-12 form-wrapper form-product-order" hidden>
+                                        <div class="form-info manufacturer">
+                                            <form class="overflow" ng-submit="addToBasketProdOrder()">
+                                                <div class="product-order-fields">
+                                                    <div class="form-group">
+                                                        <label>Manufacturer:</label>
+                                                        <select  class="form-control" id="inventory-category" ng-model="inventoryData.manufacturer_id" required>
+                                                            <option value="">-- Select Manufacturer --</option>
+                                                            <option ng-repeat="list in manufacturerList" value="{{ list.id }}">{{ list.name }}</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-bottom: 15px;overflow:hidden">
+                                                    <div class="col-md-4 remove-padding-left">
+                                                        <label>Product</label>
+                                                        <input type="text" ng-model="inventoryData.product_name" class="form-control" required>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Quantity</label>
+                                                        <input step="any" type="number" ng-model="inventoryData.quantity" class="form-control" required>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Price (Per Item)</label>
+                                                        <input step="any" type="number" ng-model="inventoryData.price" class="form-control" required>
+                                                    </div>
+                                                </div>
+
+                                               <div class="col-md-12">
+                                                    <div class="form-group overflow">
+                                                        <label>Type</label>
+                                                        <div class="col-md-12">
+                                                            <div class="radio inline-block">
+                                                                <label style="margin-right: 20px;">
+                                                                    <input name="category" ng-model="inventoryData.product_type" type="radio" value="Wholesale" required>
+                                                                    Wholesale
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio inline-block">
+                                                                <label>
+                                                                    <input name="category" ng-model="inventoryData.product_type" type="radio" value="Retail" required>
+                                                                    Retail
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>   
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Product Details</label>
+                                                    <textarea class="form-control" ng-model="inventoryData.product_details" rows="5"></textarea>
+                                                </div>
+                                                <div class="remove-padding-left text-right">
+                                                    <div class="form-group overflow">
+                                                        <button class="btn btn-info">Add Product</button>
+                                                    </div>   
+                                                </div>
+                                            </form>
+                                        </div>
+                                   </div>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+           <div class="product-basket">
+               <div class="basket-content">
+                   <h3 class="heading text-center">Selected Product</h3>
+                   <div class="basket-list">
+                       <ul class="list-unstyled lists" id="basket-ordered-lists">
+                        </ul>
+                   </div>
+                   <div class="total-wrapper">
+                       <h3>Total: <span class="pull-right">Php <span id="totalBasketPrice">0.00</span></span></h3>     
+                   </div>
+                   <div class="save-button">
+                       <button class="btn btn-primary float" id="submitProductBasket" ng-hide="hideLoadState" ng-click="storeSelectedData()"><i class="fa fa-shopping-cart"></i> Save Product</button>
+                       <button class="btn btn-default float" disabled ng-show="showLoadState">Saving</button>
+                       <button class="btn btn-default float" disabled ng-show="successLoadState">Saved</button>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal Edit -->
+<!-- <div class="modal fade" id="modal-edit-selection">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit Product</h4>
+            </div>
+        <div class="modal-body overflow">
+            <div class="col-md-12">
+                <form class="overflow" ng-submit="updateOrderedProduct()">
+                    <div class="form-group" style="margin-bottom: 15px;overflow:hidden">
+                        <input type="hidden" ng-model="dataEdit.cartID">
+                        <div class="col-md-12">
+                            <label>Product Name</label>
+                            <input type="text" ng-model="dataEdit.product_name"  class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            <label>Quantity</label>
+                            <input type="text" ng-model="dataEdit.quantity" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            <label>Price</label>
+                            <input type="text" ng-model="dataEdit.price" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group overflow">
+                            <label>Type</label>
+                            <div class="col-md-12">
+                                <div class="radio inline-block">
+                                    <label style="margin-right: 20px;">
+                                        <input name="category" ng-model="dataEdit.product_type" type="radio">
+                                        Wholesale
+                                    </label>
+                                </div>
+                                <div class="radio inline-block">
+                                    <label>
+                                        <input name="category" ng-model="dataEdit.product_type" type="radio">
+                                        Retail
+                                    </label>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Product Details</label>
+                            <textarea class="form-control" ng-model="dataEdit.product_details" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="Save Changes">
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal --> 
+
+<script type="text/javascript">
+    $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+</script>

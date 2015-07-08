@@ -1,0 +1,36 @@
+html,
+body {
+  height: 100%;
+  background-color: #f1f1f1;
+}
+/* Custom CSS */
+.float {
+  width: 100%;
+}
+.remove-side-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.remove-padding-left {
+  padding-left: 0 !important;
+}
+.remove-padding-right {
+  padding-right: 0 !important;
+}
+.remove-margin {
+  margin: 0;
+}
+.space-separator {
+  width: 100%;
+  margin-top: 15px;
+}
+.overflow {
+  overflow: hidden;
+}
+.margin-btm-md {
+  margin-bottom: 20px;
+}
+.form-wrapper
+{
+  display: none;
+}

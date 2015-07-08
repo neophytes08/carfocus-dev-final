@@ -1,0 +1,18 @@
+<li>
+    <a href="javascript:void(0)"><i class="fa fa-money  fa-fw"></i> Expenses<i class="fa arrow"></i></a>
+    <ul class="nav nav-second-level">
+    <% if current_user.user_type == 'admin'|| current_user.user_type == 'secretary' || current_user.user_type == 'regular' %>
+        <li>
+            <a href="javascript:void(0)" navigation-app="expense-add">Add Expenses</a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" navigation-app="expense-view">View Expenses</a>
+        </li>
+    <% elsif  current_user.user_type == 'co-owner' %>
+        <li>
+            <a href="javascript:void(0)" navigation-app="expense-view">View Expenses</a>
+        </li>
+    <% end %>
+    </ul>
+    <!-- /.nav-second-level -->
+</li>

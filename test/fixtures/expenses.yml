@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  cash_borrowed: 1
+  cash_beginning: 1
+  bank_id: 1
+  cash_withdrawal: 1
+  cash_on_hand: 1
+  purpose: MyText
+  amount: 1
+  group_id: 1
+
+two:
+  user_id: 1
+  cash_borrowed: 1
+  cash_beginning: 1
+  bank_id: 1
+  cash_withdrawal: 1
+  cash_on_hand: 1
+  purpose: MyText
+  amount: 1
+  group_id: 1

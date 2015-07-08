@@ -1,0 +1,25 @@
+@import url('styles.css') screen;
+html,
+body {
+  background-color: #ffffff;
+}
+body section#main-container div.row div.login-form div.logo {
+  margin-top: 20%;
+  margin-bottom: 10%;
+}
+body section#main-container div.row div.login-form div.logo img {
+  width: 150px;
+}
+body section#main-container div.row div.login-form div.login-panel {
+  border: none;
+}
+body section#main-container div.row div.login-form div.login-panel div.panel-heading {
+  background: none;
+  border: none;
+}
+body section#main-container div.row div.login-form div.login-panel div.panel-heading h3.panel-title {
+  color: #484848;
+}
+body section#main-container div.row div.login-form div.login-panel div.panel-body form fieldset div.form-group input {
+  text-align: center;
+}

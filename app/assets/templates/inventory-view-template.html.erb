@@ -1,0 +1,291 @@
+<div class="main-wrapper col-lg-12">
+<h1 class="page-header">Inventory</h1>
+<div class="row">
+<div class="col-md-12">
+    <div class="content">
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills nav-justified inventory-category" role="tablist">
+            <li role="presentation" class="active"><a href="#on-stock" aria-controls="on-stock" role="tab" data-toggle="tab">On Stock</a></li>
+            <li role="presentation"><a href="#direct-purchase" aria-controls="direct-purchase" role="tab" data-toggle="tab">Direct Purchase</a></li>
+            <li role="presentation"><a href="#product-order" aria-controls="product-order" role="tab" data-toggle="tab">Product Order</a></li>
+        </ul>
+        <!-- Search -->
+        <div class="row table-settings">
+<!--                                         <div class="col-md-5 view-option">
+                <form class="form-inline">
+                    <label>View by: </label>
+                    <div class="form-group">
+                        <select class="form-control" id="day">
+                            <option value="" selected>Day</option>
+                        </select>
+                    </div>  
+                    <div class="form-group">
+                        <select class="form-control" id="month">
+                            <option value="" selected>Month</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>  
+                    <div class="form-group">
+                        <select class="form-control" id="year">
+                        </select>
+                    </div>  
+                </form>
+            </div> -->
+        </div>
+        <!-- end: Search -->
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="on-stock">
+                <div class="tab-container">
+                    <table datatable="ng" class="row-border table table-striped table-bordered table-hover" >
+                        <thead>
+                            <tr ng-show="tableHeadings1">
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
+                                    <th>Action</th>
+                                <% end %>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="gradeA odd" role="row" ng-repeat="list in onStockList">
+                                <td>
+                                    <a href="#" data-toggle="modal" ng-click="displayProductInfo(list,'viewOnStock')" data-target="#productModalInfo" ng-bind="list.product_name"></a>
+                                </td>
+                                <td ng-bind="list.quantity"></td>
+                                <td>P <span ng-bind="list.price"></span></td>
+                                <td>{{list.created_at| cmdate:'yyyy-MM-dd'}}</td>
+                                <td ng-init="list.total=list.quantity*list.price">P {{list.total}}</td>
+                                <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
+                                <td>
+                                    <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="displayProductInfo( list, 'edit' )"><span class="label label-primary">Edit</span></a>
+                                    <a href ng-click="removeProduct(list,'on-stock')"><span class="label label-danger">Remove</span></a>
+                                </td>
+                                <% end %>
+                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="direct-purchase">
+                <div class="tab-container">
+                    <table datatable="ng" class="row-border table table-striped table-bordered table-hover" >
+                        <thead>
+                            <tr role="row">
+                                <th>OR Number</th>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Store</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary'%>
+                                    <th>Action</th>
+                                <% end %>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="gradeA odd" ng-repeat="list in dirPurchList">
+                                <td>
+                                    <a href="#" data-toggle="modal" data-target="#productModalInfo" ng-bind="list.or_no"></a>
+                                </td>
+                                <th ng-bind="list.product_name"></th>
+                                <td ng-bind="list.quantity"></td>
+                                <td>P <span ng-bind="list.price"></span></td>
+                                <th ng-bind="list.store_name"></th>
+                                <td>{{list.created_at| cmdate:'yyyy-MM-dd'}}</td>
+                                <td ng-init="list.total=list.quantity*list.price">P {{list.total}}</td>
+                                <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary'%>
+                                <td>
+                                    <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="displayProductInfo( list, 'edit' )"><span class="label label-primary">Edit</span></a>
+                                    <a href ng-click="removeProduct(list,'direct-purchase')"><span class="label label-danger">Remove</span></a>
+                                </td>
+                                <% end %>
+                             </tr>                       
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="product-order">
+                <div class="tab-container">
+                    <table datatable="ng" class="row-border table table-striped table-bordered table-hover" >
+                        <thead>
+                            <tr role="row">
+                                <th>Manufacturer</th>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                 <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary'%>
+                                    <th>Action</th>
+                                <% end %>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="gradeA odd" role="row" ng-repeat="list in productOrderList">
+                                <td class="sorting_1">
+                                    <a href="#" data-toggle="modal" data-target="#productModalInfo" ng-bind="list.manufacturer_id"></a>
+                                </td>
+                                <td ng-bind="list.product_name"></td>
+                                <td ng-bind="list.quantity"></td>
+                                <td ng-bind="list.price"></td>
+                                <td >{{list.created_at| date}}</td>
+                                <td ng-init="list.total=list.price*list.quantity">P <span ng-bind="list.total"></span></td>
+                                <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary'%>
+                                <td>
+                                    <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="displayProductInfo( list, 'edit' )"><span class="label label-primary">Edit</span></a>
+                                    <a href ng-click="removeProduct(list,'direct-purchase')"><span class="label label-danger">Remove</span></a>
+                                </td>
+                                <% end %>
+                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<!-- View Modal for product info -->
+<div class="modal fade" id="productModalInfo" tabindex="-1" role="dialog" aria-labelledby="productModalInfoLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="productModalInfoLabel">Product Transaction Detail</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 product-description">
+                        <table class="table table-hovered table-bordered">
+                            <tr>
+                                <th>Transaction ID:</th>
+                                <td ng-bind="displayModalInfo.inventory_id"></td>
+                            </tr>
+                            <tr>
+                                <th>Product Name:</th>
+                                <td ng-bind="displayModalInfo.product_name"></td>
+                            </tr>
+                            <tr>
+                                <th>Quantity:</th>
+                                <td ng-bind="displayModalInfo.quantity">2</td>
+                            </tr>
+                            <tr>
+                                <th>Price:</th>
+                                <td ng-bind="displayModalInfo.price">Php 12.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6 product-description">
+                        <table class="table table-hovered table-bordered">
+                            <tr ng-show="statusActive">
+                                <th>Store:</th>
+                                <td ng-bind="displayModalInfo.store">Kakings</td>
+                            </tr>
+                            <tr>
+                                <th>Date:</th>
+                                <td>{{ displayModalInfo.created_at | date}}</td>
+                            </tr>
+                            <tr ng-show="statusActive">
+                                <th>Buyer:</th>
+                                <td>Ms. Jocelyn dela Cruz</td>
+                            </tr>
+                            <tr>
+                                <th>Total:</th>
+                                <td ng-init="displayModalInfo.total=displayModalInfo.quantity*displayModalInfo.price">P <span class="text-info">{{displayModalInfo.total}}</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-12 description">
+                        <label>Description</label>
+                        <p ng-bind="displayModalInfo.product_details" ></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end: View Modal -->
+
+
+
+<!-- Edit Modal for product info -->
+<div class="modal fade bs-example-modal-lg" id="productModalInfoEdit" tabindex="-1" role="dialog" aria-labelledby="productModalInfoEdit">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="productModalInfoLabel">Product Transaction Detail</h4>
+            </div>
+            <form ng-submit="editProductInfo()">
+            <div class="modal-body">
+                <div class="row">
+                        <div class="col-md-6 product-description">
+                            <table class="table table-hovered table-bordered table-condensed">
+                                <tr>
+                                    <th>Transaction ID:</th>
+                                    <input type="hidden" ng-model="displModalInfo.category_id">
+                                    <td ng-bind="displayModalInfo.inventory_id"></td>
+                                </tr>
+                                <tr>
+                                    <th>Product Name:</th>
+                                    <td><input type="text" ng-model="displayModalInfo.product_name" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <th>Quantity:</th>
+                                    <td><input type="number" step="any" ng-model="displayModalInfo.quantity" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <th>Price:</th>
+                                    <td><input type="number" step="any" ng-model="displayModalInfo.price" class="form-control"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-6 product-description">
+                            <table class="table table-hovered table-bordered">
+                                <tr>
+                                    <th>Date:</th>
+                                    <td>{{displayModalInfo.created_at| cmdate:'yyyy-MM-dd'}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-12 description">
+                            <label>Description</label>
+                            <textarea class="form-control" ng-model="displayModalInfo.product_details" rows="5"></textarea>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end: View Modal -->
+
+<!-- /.col-lg-12 -->
