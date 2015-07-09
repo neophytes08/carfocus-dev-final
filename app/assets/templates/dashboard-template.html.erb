@@ -8,3 +8,59 @@
         </div>
     </div>
 </div>
+
+    <!-- modals -->
+<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Settings <i class="fa fa-gear fa-fw"></i> </h4>
+      </div>
+      <div class="modal-body">
+        <div class="content">
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills nav-justified inventory-category" role="tablist">
+            <li role="presentation" class="active"><a href="#user-settings" aria-controls="user-settings" role="tab" data-toggle="tab">Users</a></li>
+            <li role="presentation"><a href="#manufacturer-settings" aria-controls="manufacturer-settings" role="tab" data-toggle="tab">Manfucaturer</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane" id="user-settings">
+                <div class="tab-container">
+                   
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane active" id="manufacturer-settings">
+                <div class="tab-container">
+                    <form ng-submit="submitManufacturer()">
+                      <table class="table">
+                        <tr>
+                          <td>Manufacturer Name:</td>
+                          <td><input type="text" class="form-control" ng-model="manufacturerData.name"></td>
+                        </tr>
+                        <tr>
+                          <td>Address:</td>
+                          <td><input type="text" class="form-control" ng-model="manufacturerData.address"></td>
+                        </tr>
+                        <tr>
+                          <td>Contact #:</td>
+                          <td><input type="text" class="form-control" ng-model="manufacturerData.contact_no"></td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                          <td class="text-right">
+                            <button class="btn btn-primary" type="submit">Save</button>
+                          </td>
+                        </tr>
+                      </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>

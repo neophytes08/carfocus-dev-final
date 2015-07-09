@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'services/index'
 
-  resources :user, :services, :categories
+  resources :user, :services, :categories, :manufacturers
   resources :inventories, except: :show
   devise_for :users
     
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       post '/inventories/submitDirectPurchase' => 'inventories#submitDirectPurchase'
       post '/inventories/submitStock' => 'inventories#submitStock'
       post '/inventories/submitProductOrder' => 'inventories#submitProductOrder'
-
+      post '/manufacturers/submitManufacturer' => 'manufacturers#submitManufacturer'
       # get list
       get '/inventories/getInventoryStocks' => 'inventories#getInventoryStocks'
       get '/inventories/getProductOrderList' => 'inventories#getProductOrderList'

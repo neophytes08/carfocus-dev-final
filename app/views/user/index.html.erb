@@ -37,7 +37,7 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="/user/settings"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href data-toggle="modal" data-target="#settings"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="/users/sign_out"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -98,8 +98,8 @@
             <div class="container-fluid">
                 <div class="row">
                 <% if current_user.user_type == 'admin' %>
-                   <section template="dashboard" template-name="dashboard-template.html" class="hidden" template-ctrl="dashBoardCtrl"></section>
-                   <section template="inventory-view" template-name="inventory-view-template.html" template-ctrl="inventoryViewCtrl"></section>
+                   <section template="dashboard" template-name="dashboard-template.html" template-ctrl="dashBoardCtrl"></section>
+                   <section template="inventory-view" template-name="inventory-view-template.html" class="hidden" template-ctrl="inventoryViewCtrl"></section>
                    <section template="inventory-add" template-name="inventory-add-template.html" class="hidden" template-ctrl="inventoryAddCtrl"></section>
                    <section template="expense-add" template-name="expense-add-template.html" class="hidden" template-ctrl="expenseAddCtrl"></section>
                    <section template="expense-view" template-name="expense-view-template.html" class="hidden" template-ctrl="expenseViewCtrl"></section>

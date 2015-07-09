@@ -6,6 +6,14 @@ app
     function controller($scope, $http, CarServer)
     {
       console.log("dashBoardCtrl");
+      $scope.manufacturerData = {};
+
+      $scope.submitManufacturer = function submitManufacturer(){
+        CarServer.request("post", '/manufacturers/submitManufacturer',
+        function(response){
+          console.log(response);
+        }, $scope.manufacturerData);
+      }
     }
   ])
   .controller('inventoryViewCtrl', [
