@@ -233,7 +233,7 @@ app
         });
 
         disabledButton();
-         console.log($scope.addOnStock.length);
+        console.log($scope.addOnStock.length);
         $scope.inventoryData.price = "";
         $scope.inventoryData.product_name = "";
         $scope.inventoryData.product_details = "";
@@ -247,7 +247,6 @@ app
 
       // Add Direct Purchase to Basket 
       $scope.addToBasketDirPurch = function addToBasketDirPurch(){
-        disabledButton();
         console.log( 'Added to On Stock basket' );
         console.log($scope.inventoryData);
         var today = new Date();
@@ -274,6 +273,7 @@ app
           'details'          : $scope.inventoryData.details
         } );
 
+        disabledButton();
         $scope.inventoryData.product_name = "";
         $scope.inventoryData.product_details = "";
         $scope.inventoryData.price = "";
@@ -284,7 +284,6 @@ app
 
       // Add Product Order to Basket 
       $scope.addToBasketProdOrder = function addToBasketProdOrder(){
-        disabledButton();
         console.log( 'Added to Prodct Order basket' );
         console.log($scope.inventoryData);
 
@@ -310,6 +309,7 @@ app
           'product_details'   : $scope.inventoryData.product_details
         });
 
+        disabledButton();
         $scope.inventoryData.product_name = "";
         $scope.inventoryData.quantity = "";
         $scope.inventoryData.price = "";
@@ -376,6 +376,7 @@ app
       }
 
       function disabledButton() {
+        console.log( $scope.addOnStock.length )
         if( $scope.addOnStock.length < 1 ) {
           $( '#submitProductBasket' ).attr( 'disabled' , true );
         }else {
@@ -563,6 +564,102 @@ app
     function controller($scope, $http, CarServer)
     {
       console.log("esitmationAddCtrl");
+      $scope.serviceList = {};
+      $scope.showServiceStatus = false;
+      $scope.serviceDetails = {};
+      // $scope.serviceDetailLists = {};
+
+      $scope.serviceDataToModal = {};
+      $scope.servicePushToBox = [];
+      $scope.selectedServices = [];
+
+      $scope.totalServiceAmountDetailPerBox = 0;
+
+      /*----- Display Services ------*/
+      $scope.getServices = function getServices(){
+        CarServer.request("get", "/services/getServices",
+          function(response){
+            console.log(response);
+            $scope.serviceList = response;
+          });
+      }
+
+      /*----- Display Existing Customer -----*/
+      $scope.getExistingCustomer = function getExistingCustomer() {
+        CarServer.request("get", "/job_orders/submitJobOrder",
+          function(response){
+            console.log(response);
+            $scope.serviceList = response;
+          });
+      }
+
+      /*----- Show selected status on alert box ( green ,red , yellow, blue) ------*/
+      $scope.displayService = function displayService( service ) {
+        $scope.showServiceStatus = true;
+        var randomID = new Date().getTime() + '-' + Math.random().toString(36).slice(2);
+        var colors = new Array('success','warning','danger','info');
+        var pushedServices = {};
+        pushedServices = { 'service_id' : service.id , 'randomID' : randomID, 'service_name' : service.service_name , 'class' : colors[$scope.selectedServices.length % colors.length]  };
+        $scope.selectedServices.push( pushedServices );
+        console.log($scope.selectedServices);
+        console.log(service);
+        $( 'option[label='+service.service_name+']' ).attr( 'disabled' , true );
+      }
+
+      /*------ Remove Selected Service with alert box ( green ,red , yellow, blue) ------*/
+      $scope.removeSelectedService = function removeSelectedService(service) {
+        var totalTobeSubtracted = 0;
+        for( x in $scope.selectedServices ) {
+          if( $scope.selectedServices[x].randomID == service.randomID ){
+            $scope.selectedServices.splice(x,1);
+            $( 'option[label='+service.service_name+']' ).removeAttr( 'disabled' );
+            // $scope.servicePushToBox = [];
+            for( y in $scope.servicePushToBox ) {
+              // console.log( $scope.servicePushToBox[y].randomID )
+              if ( $scope.servicePushToBox[y].randomID == service.randomID ) {
+                console.log($scope.servicePushToBox[y].amount)
+                 totalTobeSubtracted = totalTobeSubtracted + $scope.servicePushToBox[y].amount ;
+                 $scope.servicePushToBox.splice(y,1);
+                 console.log( 'total '+totalTobeSubtracted );
+              };
+            }
+          }
+        }
+        $scope.totalServiceAmountDetailPerBox = $scope.totalServiceAmountDetailPerBox - totalTobeSubtracted;
+        console.log( '$scope.servicePushToBox' )
+        console.log(  $scope.totalServiceAmountDetailPerBox + '=' + $scope.totalServiceAmountDetailPerBox + ' - ' +totalTobeSubtracted )
+        console.log( $scope.totalServiceAmountDetailPerBox );
+
+      }
+
+
+      /*------ Save service data list to modal ------*/
+      $scope.saveToModalAdd = function saveToModalAdd( service ) {
+        $scope.serviceDataToModal = service;
+      }
+
+      /*------ Add service on list to alert box ( green ,red , yellow, blue) ------*/
+      $scope.insertServiceDetails = function insertServiceDetails(data,boxData) {
+        var addedValue = 0;
+        var dataServiceAdded = { service_id : boxData.service_id , description : data.description , amount : data.amount , randomID : boxData.randomID  };
+        $scope.servicePushToBox.push(dataServiceAdded);        
+        for( x in $scope.servicePushToBox ) {
+          if ( boxData.randomID == $scope.servicePushToBox[x].randomID ) {
+            addedValue = $scope.servicePushToBox[x].amount;
+          };
+        }
+        $scope.totalServiceAmountDetailPerBox = $scope.totalServiceAmountDetailPerBox + addedValue;
+        $scope.serviceDetails = {};
+        $('#modal-add-service-detail').modal('hide');
+      }
+
+
+      // load functions
+      $scope.getServices();
+      $(".existing_customer_lists_wrapper").select2({
+          placeholder: "Search for existing customer",
+          allowClear: false
+      }).enable(false);
     }
   ])
   .controller('estimationViewCtrl', [

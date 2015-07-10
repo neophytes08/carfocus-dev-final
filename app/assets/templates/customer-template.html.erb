@@ -1,0 +1,69 @@
+ <div class="main-wrapper col-lg-12">
+    <h1 class="page-header">Customer Details</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content customer">
+              <div class="legends">
+                <ul class="list-inline">
+                  <li><button class="btn btn-success btn-xs">Payment Fully Paid</button></li>
+                  <li><button class="btn btn-danger btn-xs">Customer with remaining Balance</button></li>
+                </ul>
+              </div>
+              <table class="row-border table table-striped table-bordered table-hover" >
+                    <thead>
+                        <tr role="row">
+                            <th style="width:20px;">Status</th>
+                            <th>Customer Name</th>
+                            <th>Date of Transaction</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td class="text-center text-danger"><i class="fa fa-circle"></i></td>
+                          <td class="sorting_1">
+                              <a href="#" data-toggle="modal" data-target="#modal-edit-payment">Juan dela Cruz</a>
+                          </td>
+                          <td>July 21, 2015</td>
+                          <td>
+                              <a href="#" data-toggle="modal" data-target="#modal-edit-payment" ><span class="label label-primary">Edit</span></a>
+                              <a href><span class="label label-danger">Remove</span></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center text-success"><i class="fa fa-circle"></i></td>
+                          <td class="sorting_1">
+                              <a href="#" data-toggle="modal" data-target="#productModalInfo">Juan dela Cruz</a>
+                          </td>
+                          <td>July 21, 2015</td>
+                          <td>
+                              <a href="#" data-toggle="modal" data-target="#modal-edit-payment" ><span class="label label-primary">Edit</span></a>
+                              <a href><span class="label label-danger">Remove</span></a>
+                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-edit-payment" aria-labelledby="productModalInfoEdit">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="productModalInfoLabel">Product Transaction Detail</h4>
+            </div>
+            <form >
+            <div class="modal-body">
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end: View Modal -->

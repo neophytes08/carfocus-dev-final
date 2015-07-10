@@ -3,12 +3,176 @@
     <div class="row">
         <div class="col-md-12">
             <div class="content dashboard">
-               <h3>Coming Soon</h3>
+            <!-- /.panel -->
+            <div class="panel panel-default">
+                <div class="row">
+                    <div class="panel-body">
+                        <div class="col-lg-8">
+                            <div id="hero-bar"></div>
+                        </div>
+                         <div class="col-md-4 graph-daily-container">
+                             <section class="daily-income-text">
+                                <h4>Daily Income</h4>
+                             </section>
+                            <section class="daily-cash-text">
+                                <h2> P33,000.00 </h2>
+                            </section>
+                            <section class="view-by-selection">
+                                <h4>View by</h4>
+                            </section>
+                            <section class="select-option">
+                                <select class="custom-select">
+                                    <option> <i class="glyphicon glyphicon-triangle-bottom"> Monthly </i></option>
+                                    <option> <i class="glyphicon glyphicon-triangle-bottom"> Daily  </i></option>
+                                </select>
+                            </section>
+                            <section class="view-by-selection">
+                                <h4>Options</h4>
+                            </section>
+                            <section class="option-view">
+                                <h5><a href="">Income</a></h5>
+                            </section>
+                            <section class="option-view">
+                                <h5><a href="">Customers</a></h5>
+                            </section>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
+    
+<div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body panel-header-box">
+                    <h3>Inventory</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table custom-table">
+                        <tr>
+                            <td>Bumper</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Hood</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Windshield</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Sidemirror</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>Wheels</td>
+                            <td>9</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="panel-footer custom-footer"><a href="">See all</a></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body panel-header-box">
+                    <h3>Estimations</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table custom-table">
+                        <tr>
+                            <td>Civic(KVK-123)</td>
+                            <td>P7,250.00</td>
+                        </tr>
+                        <tr>
+                            <td>Starex(KXX-373)</td>
+                            <td>P3,203.00</td>
+                        </tr>
+                        <tr>
+                            <td>Fortuner(KCL-376)</td>
+                            <td>P1,222.00</td>
+                        </tr>
+                        <tr>
+                            <td>Vios(CAD-857)</td>
+                            <td>P4,475.00</td>
+                        </tr>
+                        <tr>
+                            <td>Innova(BJR-643)</td>
+                            <td>P1,000.000</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="panel-footer custom-footer"><a href="">See all</a></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body panel-header-box">
+                    <h3>Logs</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table custom-table">
+                        <tr>
+                            <td>Joecel edited an estimation</td>
+                            <td>1:04pm</td>
+                        </tr>
+                        <tr>
+                             <td>Joecel created an estimation</td>
+                            <td>1:04pm</td>
+                        </tr>
+                        <tr>
+                             <td>Joecel created an estimation</td>
+                            <td>1:04pm</td>
+                        </tr>
+                        <tr>
+                             <td>Joecel edited an estimation</td>
+                            <td>1:04pm</td>
+                        </tr>
+                        <tr>
+                             <td>Joecel edited an estimation</td>
+                            <td>1:04pm</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="panel-footer custom-footer"><a href="">See all</a></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body panel-header-box">
+                    <h3>Expenses</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table custom-table">
+                        <tr>
+                            <td>Masking tape</td>
+                            <td>P25.00</td>
+                        </tr>
+                        <tr>
+                            <td>Commute expense</td>
+                            <td>P14.00</td>
+                        </tr>
+                        <tr>
+                             <td>Snack</td>
+                            <td>P100.00</td>
+                        </tr>
+                        <tr>
+                             <td>Wire</td>
+                            <td>P10.00</td>
+                        </tr>
+                        <tr>
+                             <td>Blade</td>
+                            <td>P5.00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="panel-footer custom-footer"><a href="">See all</a></div>
+            </div>
+        </div>
+    </div>
     <!-- modals -->
 <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -64,3 +228,29 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+$(document).ready( function() {
+  
+  Morris.Bar({
+    // ID of the element in which to draw the chart.
+    element: 'hero-bar',
+    // Chart data records -- each entry in this array corresponds to a point on
+    // the chart.
+    data: [
+      { year: '2008', value: 20 },
+      { year: '2009', value: 10 },
+      { year: '2010', value: 5 },
+      { year: '2011', value: 5 },
+      { year: '2012', value: 20 }
+    ],
+    // The name of the data record attribute that contains x-values.
+    xkey: 'year',
+    // A list of names of data record attributes that contain y-values.
+    ykeys: ['value'],
+    // Labels for the ykeys -- will be displayed when you hover over the
+    // chart.
+    labels: ['Value']
+  });
+} )
+</script>

@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-  def index
+  def getServices
      @services = Service.all
     
     render json: @services, status: :ok 

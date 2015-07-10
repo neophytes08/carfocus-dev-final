@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150707150501) do
+ActiveRecord::Schema.define(version: 20150709083621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,14 +64,13 @@ ActiveRecord::Schema.define(version: 20150707150501) do
     t.integer  "customer_id"
     t.string   "payment_type"
     t.string   "car_model"
-    t.string   "plat_no"
+    t.string   "plate_no"
     t.string   "color"
     t.integer  "insurance_id"
     t.integer  "service_id"
-    t.text     "service_details"
     t.boolean  "approved"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "estimations", ["customer_id"], name: "index_estimations_on_customer_id", using: :btree
@@ -174,6 +173,20 @@ ActiveRecord::Schema.define(version: 20150707150501) do
   add_index "product_orders", ["category_id"], name: "index_product_orders_on_category_id", using: :btree
   add_index "product_orders", ["inventory_id"], name: "index_product_orders_on_inventory_id", using: :btree
   add_index "product_orders", ["manufacturer_id"], name: "index_product_orders_on_manufacturer_id", using: :btree
+
+  create_table "service_details", force: :cascade do |t|
+    t.string   "service_id"
+    t.string   "service_details"
+    t.integer  "price"
+    t.integer  "customer_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "estimation_id"
+  end
+
+  add_index "service_details", ["customer_id"], name: "index_service_details_on_customer_id", using: :btree
+  add_index "service_details", ["estimation_id"], name: "index_service_details_on_estimation_id", using: :btree
+  add_index "service_details", ["service_id"], name: "index_service_details_on_service_id", using: :btree
 
   create_table "services", force: :cascade do |t|
     t.string   "service_name"

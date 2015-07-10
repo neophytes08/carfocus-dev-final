@@ -6,6 +6,8 @@
   <%= stylesheet_link_tag 'dataTables.bootstrap' %>
   <%= stylesheet_link_tag 'styles' %>
   <%= stylesheet_link_tag 'admin' %>
+  <%= stylesheet_link_tag 'morris' %>
+  <%= stylesheet_link_tag 'select2.min' %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <% end %>
@@ -68,6 +70,7 @@
                           <%= render 'inventory' %>
                           <%= render 'expenses' %>
                           <%= render 'estimations' %>
+                          <%= render 'customers' %>
                           <%= render 'summary' %>
 
                         <% elsif current_user.user_type == 'regular' %>
@@ -78,6 +81,7 @@
                           <%= render 'inventory' %>
                           <%= render 'estimations' %>
                           <%= render 'expenses' %>
+                          <%= render 'customers' %>
                           <%= render 'summary' %>
                         <% elsif current_user.user_type == 'co-owner' %>
                           <%= render 'dashboard' %>
@@ -98,13 +102,14 @@
             <div class="container-fluid">
                 <div class="row">
                 <% if current_user.user_type == 'admin' %>
-                   <section template="dashboard" template-name="dashboard-template.html" template-ctrl="dashBoardCtrl"></section>
+                   <section template="dashboard" template-name="dashboard-template.html" class="hidden" class="" template-ctrl="dashBoardCtrl"></section>
                    <section template="inventory-view" template-name="inventory-view-template.html" class="hidden" template-ctrl="inventoryViewCtrl"></section>
                    <section template="inventory-add" template-name="inventory-add-template.html" class="hidden" template-ctrl="inventoryAddCtrl"></section>
                    <section template="expense-add" template-name="expense-add-template.html" class="hidden" template-ctrl="expenseAddCtrl"></section>
                    <section template="expense-view" template-name="expense-view-template.html" class="hidden" template-ctrl="expenseViewCtrl"></section>
-                   <section template="estimation-add" template-name="estimation-add-template.html" class="hidden" template-ctrl="esitmationAddCtrl"></section>
+                   <section template="estimation-add" template-name="estimation-add-template.html" class="" template-ctrl="esitmationAddCtrl"></section>
                    <section template="estimation-view" template-name="estimation-view-template.html" class="hidden" template-ctrl="estimationViewCtrl"></section>
+                   <section template="customer" template-name="customer-template.html" template-ctrl="dashBoardCtrl" class="hidden"></section>
                    <section template="summary-view" template-name="summary-view-template.html" class="hidden" template-ctrl="summaryViewCtrl"></section>
 
                 <% elsif current_user.user_type == 'regular' %>
@@ -119,6 +124,7 @@
                    <section template="estimation-view" template-name="estimation-view-template.html" class="hidden" template-ctrl="estimationViewCtrl"></section>
                    <section template="expense-add" template-name="expense-add-template.html" class="hidden" template-ctrl="expenseAddCtrl"></section>
                    <section template="expense-view" template-name="expense-view-template.html" class="hidden" template-ctrl="expenseViewCtrl"></section>
+                   <section template="customer" template-name="customer-template.html" template-ctrl="dashBoardCtrl" class="hidden"></section>
                    <section template="summary-view" template-name="summary-view-template.html" class="hidden" template-ctrl="summaryViewCtrl"></section>
 
                 <% elsif current_user.user_type == 'co-owner' %>
