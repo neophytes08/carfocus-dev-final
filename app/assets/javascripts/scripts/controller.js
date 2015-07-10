@@ -12,6 +12,7 @@ app
         CarServer.request("post", '/manufacturers/submitManufacturer',
         function(response){
           console.log(response);
+          $('#settings').modal('hide');
         }, $scope.manufacturerData);
       }
     }

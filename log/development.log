@@ -1,5 +1,7 @@
 
 
+
+
 Started GET "/" for 127.0.0.1 at 2015-07-02 12:32:01 +0800
 
 ActiveRecord::NoDatabaseError (FATAL:  database "CarFocus_development" does not exist
