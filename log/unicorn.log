@@ -1,0 +1,2408 @@
+I, [2015-07-09T06:19:35.431777 #26021]  INFO -- : unlinking existing socket=/tmp/unicorn.car-focus.sock
+I, [2015-07-09T06:19:35.432311 #26021]  INFO -- : listening on addr=/tmp/unicorn.car-focus.sock fd=10
+I, [2015-07-09T06:19:35.432609 #26021]  INFO -- : worker=0 spawning...
+I, [2015-07-09T06:19:35.438960 #26021]  INFO -- : worker=1 spawning...
+I, [2015-07-09T06:19:35.440031 #26024]  INFO -- : worker=0 spawned pid=26024
+I, [2015-07-09T06:19:35.440280 #26024]  INFO -- : Refreshing Gem list
+I, [2015-07-09T06:19:35.442916 #26021]  INFO -- : master process ready
+I, [2015-07-09T06:19:35.452592 #26027]  INFO -- : worker=1 spawned pid=26027
+I, [2015-07-09T06:19:35.452853 #26027]  INFO -- : Refreshing Gem list
+/root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.5/lib/bundler/shared_helpers.rb:78: warning: Insecure world writable dir /root/.rbenv/versions/2.2.2/bin in PATH, mode 040777
+/root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.5/lib/bundler/shared_helpers.rb:78: warning: Insecure world writable dir /root/.rbenv/versions/2.2.2/bin in PATH, mode 040777
+I, [2015-07-09T06:19:40.140682 #26027]  INFO -- : worker=1 ready
+I, [2015-07-09T06:19:40.141816 #26024]  INFO -- : worker=0 ready
+
+
+Started GET "/?PHPSESSID=a45ad32b00143PP%5BJW_HYCE_JES%5C" for 146.185.239.100 at 2015-07-09 06:19:49 -0400
+Cannot render console from 146.185.239.100! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as */*
+  Parameters: {"PHPSESSID"=>"a45ad32b00143PP[JW_HYCE_JES\\"}
+  Rendered devise/sessions/new.html.erb within layouts/application (96.0ms)
+Completed 200 OK in 149ms (Views: 111.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 64.233.173.198 at 2015-07-09 06:19:54 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 49.146.198.95 at 2015-07-09 06:19:54 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+
+
+Started GET "/assets/login-a2177eadd57aa45bd5e42fa2cb8458e2.css?body=1" for 64.233.173.188 at 2015-07-09 06:19:54 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/logo-def1c66f1f2baee8e5cdc231e6f602c7.png" for 64.233.173.193 at 2015-07-09 06:19:54 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendered devise/sessions/new.html.erb within layouts/application (127.6ms)
+Completed 200 OK in 184ms (Views: 144.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/styles.css" for 64.233.173.193 at 2015-07-09 06:19:55 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min-ee5ad64559f80c8d10a7b2081f357b0e.css?body=1" for 49.146.198.95 at 2015-07-09 06:19:55 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/login-a2177eadd57aa45bd5e42fa2cb8458e2.css?body=1" for 49.146.198.95 at 2015-07-09 06:19:55 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome-726dc0a21ad992b21cf5ce3ac42ed434.css?body=1" for 49.146.198.95 at 2015-07-09 06:19:55 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/logo-def1c66f1f2baee8e5cdc231e6f602c7.png" for 49.146.198.95 at 2015-07-09 06:19:55 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/styles.css" for 49.146.198.95 at 2015-07-09 06:19:56 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/sign_in" for 64.233.173.188 at 2015-07-09 06:19:59 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GRoKhHqLurXxiBCijf9g1TIAykWyL9DBMJloeF0m+dtRavfNzPKrsBbLW6J6eSoFo8ii3dbYV0y8W0Vb2El9mw==", "user"=>{"email"=>"allan.alzula@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "allan.alzula@gmail.com"]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "current_sign_in_ip" = $3, "sign_in_count" = $4, "updated_at" = $5 WHERE "users"."id" = $6  [["last_sign_in_at", "2015-07-09 09:38:42.642671"], ["current_sign_in_at", "2015-07-09 10:20:00.130101"], ["current_sign_in_ip", "64.233.173.188/32"], ["sign_in_count", 6], ["updated_at", "2015-07-09 10:20:00.134458"], ["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://128.199.117.211/
+Completed 302 Found in 266ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 64.233.173.193 at 2015-07-09 06:20:00 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by UserController#index as HTML
+  [1m[36mUserInfo Load (0.7ms)[0m  [1mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered user/_dashboard.html.erb (0.9ms)
+  Rendered user/_inventory.html.erb (1.1ms)
+  Rendered user/_expenses.html.erb (0.7ms)
+  Rendered user/_estimations.html.erb (0.8ms)
+  Rendered user/_summary.html.erb (0.5ms)
+  Rendered user/index.html.erb within layouts/application (740.5ms)
+Completed 200 OK in 746ms (Views: 741.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/scripts/factory-1d52abb1e39addd7a9fca91b2a2c4a70.js?body=1" for 64.233.173.188 at 2015-07-09 06:20:01 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application-d03c9e48391bef71264498d401962fd7.js?body=1" for 64.233.173.188 at 2015-07-09 06:20:01 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 64.233.173.198 at 2015-07-09 06:20:03 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 49.146.198.95 at 2015-07-09 06:20:03 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/images/sort_both.png" for 64.233.173.198 at 2015-07-09 06:20:04 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_both.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (179.9ms)
+
+
+Started GET "/" for 64.233.173.188 at 2015-07-09 06:23:46 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by UserController#index as HTML
+  [1m[36mUserInfo Load (0.4ms)[0m  [1mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered user/_dashboard.html.erb (0.4ms)
+  Rendered user/_inventory.html.erb (0.8ms)
+  Rendered user/_expenses.html.erb (0.6ms)
+  Rendered user/_estimations.html.erb (0.4ms)
+  Rendered user/_summary.html.erb (0.2ms)
+  Rendered user/index.html.erb within layouts/application (710.2ms)
+Completed 200 OK in 715ms (Views: 712.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 64.233.173.198 at 2015-07-09 06:23:49 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 49.146.198.95 at 2015-07-09 06:23:49 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/images/sort_both.png" for 64.233.173.198 at 2015-07-09 06:23:52 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_both.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (20.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (192.9ms)
+
+
+Started GET "/users/sign_out" for 64.233.173.198 at 2015-07-09 06:23:59 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://128.199.117.211/
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 64.233.173.198 at 2015-07-09 06:23:59 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 64.233.173.188 at 2015-07-09 06:24:02 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7wG1iU6egXd+yJZ326+N2kWhKyQWq/smDPcoH/z1QQ+wsz2Okxp2zhaiZE/q1ivcAj9Op6/igwd3KGrDTWOAdg==", "user"=>{"email"=>"allan.alzula@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "allan.alzula@gmail.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "sign_in_count" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["last_sign_in_at", "2015-07-09 10:20:00.130101"], ["current_sign_in_at", "2015-07-09 10:24:02.789146"], ["last_sign_in_ip", "64.233.173.188/32"], ["sign_in_count", 7], ["updated_at", "2015-07-09 10:24:02.792311"], ["id", 1]]
+  [1m[35m (2.1ms)[0m  COMMIT
+Redirected to http://128.199.117.211/
+Completed 302 Found in 205ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 64.233.173.193 at 2015-07-09 06:24:03 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by UserController#index as HTML
+  [1m[36mUserInfo Load (0.9ms)[0m  [1mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered user/_dashboard.html.erb (0.1ms)
+  Rendered user/_inventory.html.erb (0.1ms)
+  Rendered user/_expenses.html.erb (0.2ms)
+  Rendered user/_estimations.html.erb (0.1ms)
+  Rendered user/_summary.html.erb (0.1ms)
+  Rendered user/index.html.erb within layouts/application (430.1ms)
+Completed 200 OK in 435ms (Views: 433.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 64.233.173.188 at 2015-07-09 06:24:04 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 49.146.198.95 at 2015-07-09 06:24:05 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/images/sort_both.png" for 64.233.173.193 at 2015-07-09 06:24:06 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_both.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (145.0ms)
+
+
+Started GET "/" for 64.233.173.193 at 2015-07-09 06:32:15 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by UserController#index as HTML
+  [1m[36mUserInfo Load (0.8ms)[0m  [1mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered user/_dashboard.html.erb (0.1ms)
+  Rendered user/_inventory.html.erb (0.1ms)
+  Rendered user/_expenses.html.erb (0.1ms)
+  Rendered user/_estimations.html.erb (0.1ms)
+  Rendered user/_summary.html.erb (0.1ms)
+  Rendered user/index.html.erb within layouts/application (541.8ms)
+Completed 200 OK in 546ms (Views: 544.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scripts/factory-aa1e2a6b1090ae35800128dea17a865a.js?body=1" for 64.233.173.188 at 2015-07-09 06:32:16 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application-799810d0536620d1a1da30663525abfc.js?body=1" for 64.233.173.198 at 2015-07-09 06:32:16 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 64.233.173.198 at 2015-07-09 06:32:18 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 49.146.198.95 at 2015-07-09 06:32:18 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.188 at 2015-07-09 06:32:19 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//categories" for 64.233.173.198 at 2015-07-09 06:32:19 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (1.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Processing by InventoriesController#getInventoryStocks as HTML
+Completed 200 OK in 28ms (Views: 2.1ms | ActiveRecord: 10.7ms)
+
+
+Started GET "//inventories/getProductOrderList" for 64.233.173.198 at 2015-07-09 06:32:19 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mOnStock Load (8.4ms)[0m  SELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc
+Completed 0  in 18ms (Views: 2.7ms | ActiveRecord: 11.4ms)
+
+
+Started GET "//inventories/getManufacturerList" for 64.233.173.198 at 2015-07-09 06:32:19 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (5.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (5.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#getManufacturerList as HTML
+Processing by InventoriesController#getProductOrderList as HTML
+  [1m[35mManufacturer Load (0.9ms)[0m  SELECT "manufacturers".* FROM "manufacturers"  ORDER BY created_at asc
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 2.3ms)
+  [1m[36mProductOrder Load (1.8ms)[0m  [1mSELECT "product_orders".* FROM "product_orders"  ORDER BY created_at asc[0m
+Completed 200 OK in 17ms (Views: 2.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/images/sort_both.png" for 64.233.173.198 at 2015-07-09 06:32:20 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_both.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (176.9ms)
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.188 at 2015-07-09 06:32:30 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[36mOnStock Load (1.1ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 8ms (Views: 2.4ms | ActiveRecord: 2.4ms)
+
+
+Started POST "//manufacturers/submitManufacturer" for 64.233.173.193 at 2015-07-09 06:32:44 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by ManufacturersController#submitManufacturer as HTML
+  Parameters: {"name"=>"Toyota", "address"=>"Zone 3", "contact_no"=>"08888", "manufacturer"=>{"name"=>"Toyota", "address"=>"Zone 3", "contact_no"=>"08888"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "manufacturers" ("name", "address", "contact_no", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Toyota"], ["address", "Zone 3"], ["contact_no", "08888"], ["created_at", "2015-07-09 10:32:44.570632"], ["updated_at", "2015-07-09 10:32:44.570632"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "logs" ("user_id", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 1], ["action", "added a Manufacturer Toyota."], ["created_at", "2015-07-09 10:32:44.593478"], ["updated_at", "2015-07-09 10:32:44.593478"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 42ms (Views: 0.4ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 64.233.173.198 at 2015-07-09 06:32:53 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by UserController#index as HTML
+  [1m[36mUserInfo Load (0.7ms)[0m  [1mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered user/_dashboard.html.erb (0.1ms)
+  Rendered user/_inventory.html.erb (0.1ms)
+  Rendered user/_expenses.html.erb (0.1ms)
+  Rendered user/_estimations.html.erb (0.1ms)
+  Rendered user/_summary.html.erb (0.1ms)
+  Rendered user/index.html.erb within layouts/application (434.1ms)
+Completed 200 OK in 438ms (Views: 437.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 64.233.173.193 at 2015-07-09 06:32:57 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 49.146.198.95 at 2015-07-09 06:32:58 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.188 at 2015-07-09 06:33:00 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getProductOrderList" for 64.233.173.193 at 2015-07-09 06:33:00 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (3.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[35mUser Load (4.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getProductOrderList as HTML
+  [1m[36mOnStock Load (4.8ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 7ms (Views: 1.5ms | ActiveRecord: 4.8ms)
+  [1m[36mProductOrder Load (3.2ms)[0m  [1mSELECT "product_orders".* FROM "product_orders"  ORDER BY created_at asc[0m
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "//categories" for 64.233.173.193 at 2015-07-09 06:33:00 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getManufacturerList" for 64.233.173.198 at 2015-07-09 06:33:00 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[35mUser Load (3.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[35mUser Load (5.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getManufacturerList as HTML
+  [1m[36mCategory Load (0.8ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 22ms (Views: 9.5ms | ActiveRecord: 5.9ms)
+  [1m[36mManufacturer Load (5.8ms)[0m  [1mSELECT "manufacturers".* FROM "manufacturers"  ORDER BY created_at asc[0m
+Completed 200 OK in 27ms (Views: 13.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/images/sort_both.png" for 64.233.173.198 at 2015-07-09 06:33:00 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_both.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (174.2ms)
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.198 at 2015-07-09 06:33:10 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[36mOnStock Load (0.8ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 3ms (Views: 1.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 64.233.173.198 at 2015-07-09 06:34:11 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by UserController#index as HTML
+  [1m[36mUserInfo Load (0.8ms)[0m  [1mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered user/_dashboard.html.erb (0.1ms)
+  Rendered user/_inventory.html.erb (0.1ms)
+  Rendered user/_expenses.html.erb (0.1ms)
+  Rendered user/_estimations.html.erb (0.1ms)
+  Rendered user/_summary.html.erb (0.1ms)
+  Rendered user/index.html.erb within layouts/application (623.5ms)
+Completed 200 OK in 628ms (Views: 626.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scripts/controller-dabefa73984c13f005115a5ca3d01835.js?body=1" for 64.233.173.193 at 2015-07-09 06:34:13 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application-38e4f3e743f6afa5b9758d59c42333a0.js?body=1" for 64.233.173.198 at 2015-07-09 06:34:13 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 64.233.173.188 at 2015-07-09 06:34:14 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 49.146.198.95 at 2015-07-09 06:34:15 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.188 at 2015-07-09 06:34:16 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getProductOrderList" for 64.233.173.198 at 2015-07-09 06:34:16 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getProductOrderList as HTML
+  [1m[36mOnStock Load (9.9ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 12ms (Views: 1.5ms | ActiveRecord: 9.9ms)
+  [1m[36mProductOrder Load (4.7ms)[0m  [1mSELECT "product_orders".* FROM "product_orders"  ORDER BY created_at asc[0m
+Completed 200 OK in 13ms (Views: 2.8ms | ActiveRecord: 6.2ms)
+
+
+Started GET "//categories" for 64.233.173.193 at 2015-07-09 06:34:16 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getManufacturerList" for 64.233.173.193 at 2015-07-09 06:34:16 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[35mUser Load (5.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 5.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getManufacturerList as HTML
+  [1m[36mManufacturer Load (0.6ms)[0m  [1mSELECT "manufacturers".* FROM "manufacturers"  ORDER BY created_at asc[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/sort_both.png" for 64.233.173.193 at 2015-07-09 06:34:16 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_both.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (175.0ms)
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.188 at 2015-07-09 06:34:27 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[36mOnStock Load (0.4ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "//manufacturers/submitManufacturer" for 64.233.173.193 at 2015-07-09 06:34:36 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by ManufacturersController#submitManufacturer as HTML
+  Parameters: {"name"=>"Honda", "address"=>"Nzbs", "contact_no"=>"0776", "manufacturer"=>{"name"=>"Honda", "address"=>"Nzbs", "contact_no"=>"0776"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "manufacturers" ("name", "address", "contact_no", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Honda"], ["address", "Nzbs"], ["contact_no", "0776"], ["created_at", "2015-07-09 10:34:36.471341"], ["updated_at", "2015-07-09 10:34:36.471341"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "logs" ("user_id", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["action", "added a Manufacturer Honda."], ["created_at", "2015-07-09 10:34:36.495162"], ["updated_at", "2015-07-09 10:34:36.495162"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Completed 200 OK in 33ms (Views: 1.1ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/" for 64.233.173.198 at 2015-07-09 06:34:42 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by UserController#index as HTML
+  [1m[36mUserInfo Load (0.7ms)[0m  [1mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered user/_dashboard.html.erb (0.1ms)
+  Rendered user/_inventory.html.erb (0.1ms)
+  Rendered user/_expenses.html.erb (0.1ms)
+  Rendered user/_estimations.html.erb (0.1ms)
+  Rendered user/_summary.html.erb (0.1ms)
+  Rendered user/index.html.erb within layouts/application (423.5ms)
+Completed 200 OK in 428ms (Views: 426.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 64.233.173.198 at 2015-07-09 06:34:45 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 49.146.198.95 at 2015-07-09 06:34:45 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.188 at 2015-07-09 06:34:46 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getProductOrderList" for 64.233.173.188 at 2015-07-09 06:34:46 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[35mUser Load (4.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getProductOrderList as HTML
+  [1m[35mOnStock Load (4.1ms)[0m  SELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc
+Completed 0  in 6ms (Views: 1.2ms | ActiveRecord: 4.1ms)
+  [1m[36mProductOrder Load (3.1ms)[0m  [1mSELECT "product_orders".* FROM "product_orders"  ORDER BY created_at asc[0m
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "//categories" for 64.233.173.193 at 2015-07-09 06:34:46 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "//inventories/getManufacturerList" for 64.233.173.193 at 2015-07-09 06:34:46 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getManufacturerList as HTML
+  [1m[36mManufacturer Load (0.6ms)[0m  [1mSELECT "manufacturers".* FROM "manufacturers"  ORDER BY created_at asc[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/sort_both.png" for 64.233.173.188 at 2015-07-09 06:34:46 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_both.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (214.6ms)
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.193 at 2015-07-09 06:34:57 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[36mOnStock Load (0.5ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 2ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "//inventories/createInventory" for 64.233.173.188 at 2015-07-09 06:36:58 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#createInventory as HTML
+  Parameters: {"_json"=>[{"cartID"=>"1436438214351-ud1damvykt162yb9", "category_id"=>1, "transaction_date"=>"2015-07-09", "product_name"=>"Window", "product_details"=>"Sampme window", "product_type"=>"Retail", "price"=>5000, "quantity"=>2}], "inventory"=>{}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "inventories" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2015-07-09 10:36:58.363046"], ["updated_at", "2015-07-09 10:36:58.363046"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 6.7ms)
+
+
+Started POST "//inventories/submitStock" for 64.233.173.188 at 2015-07-09 06:36:58 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#submitStock as HTML
+  Parameters: {"cartID"=>"1436438214351-ud1damvykt162yb9", "category_id"=>1, "transaction_date"=>"2015-07-09", "product_name"=>"Window", "product_details"=>"Sampme window", "product_type"=>"Retail", "price"=>5000, "quantity"=>2, "inventory"=>{"category_id"=>1, "transaction_date"=>"2015-07-09"}}
+  [1m[36mInventory Load (0.9ms)[0m  [1mSELECT  "inventories".* FROM "inventories"  ORDER BY "inventories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "on_stocks" ("category_id", "inventory_id", "product_name", "product_type", "product_details", "quantity", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["category_id", 1], ["inventory_id", 1], ["product_name", "Window"], ["product_type", "Retail"], ["product_details", "Sampme window"], ["quantity", 2], ["price", 5000], ["created_at", "2015-07-09 10:36:58.864358"], ["updated_at", "2015-07-09 10:36:58.864358"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mOnStock Load (1.2ms)[0m  [1mSELECT  "on_stocks".* FROM "on_stocks"  ORDER BY "on_stocks"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "inventory_stocks" ("inventory_id", "on_stock_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["inventory_id", 1], ["on_stock_id", 1], ["created_at", "2015-07-09 10:36:58.899659"], ["updated_at", "2015-07-09 10:36:58.899659"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "logs" ("user_id", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 1], ["action", "added an item to Inventory(Stocks)."], ["created_at", "2015-07-09 10:36:58.908089"], ["updated_at", "2015-07-09 10:36:58.908089"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 82ms (Views: 0.4ms | ActiveRecord: 20.4ms)
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.188 at 2015-07-09 06:36:59 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[35mOnStock Load (0.7ms)[0m  SELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc
+Completed 0  in 19ms (Views: 16.6ms | ActiveRecord: 1.8ms)
+
+
+Started POST "//inventories/createInventory" for 64.233.173.198 at 2015-07-09 06:39:47 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#createInventory as HTML
+  Parameters: {"_json"=>[{"cartID"=>"1436438271990-kaaza14l9qdoyldi", "category_id"=>1, "transaction_date"=>"2015-07-09", "product_name"=>"Hood", "product_details"=>"Hood", "product_type"=>"Retail", "price"=>6000, "quantity"=>2}, {"cartID"=>"1436438380430-9n50ih3jzrw45cdi", "category_id"=>1, "transaction_date"=>"2015-07-09", "product_name"=>"Bodykit", "product_details"=>"Sample bodykit", "product_type"=>"Retail", "price"=>6000, "quantity"=>9}], "inventory"=>{}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 1], ["created_at", "2015-07-09 10:39:47.325270"], ["updated_at", "2015-07-09 10:39:47.325270"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Started POST "//inventories/submitStock" for 64.233.173.188 at 2015-07-09 06:39:47 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "//inventories/submitStock" for 64.233.173.193 at 2015-07-09 06:39:47 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (4.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#submitStock as HTML
+  Parameters: {"cartID"=>"1436438271990-kaaza14l9qdoyldi", "category_id"=>1, "transaction_date"=>"2015-07-09", "product_name"=>"Hood", "product_details"=>"Hood", "product_type"=>"Retail", "price"=>6000, "quantity"=>2, "inventory"=>{"category_id"=>1, "transaction_date"=>"2015-07-09"}}
+  [1m[35mUser Load (4.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#submitStock as HTML
+  Parameters: {"cartID"=>"1436438380430-9n50ih3jzrw45cdi", "category_id"=>1, "transaction_date"=>"2015-07-09", "product_name"=>"Bodykit", "product_details"=>"Sample bodykit", "product_type"=>"Retail", "price"=>6000, "quantity"=>9, "inventory"=>{"category_id"=>1, "transaction_date"=>"2015-07-09"}}
+  [1m[35mInventory Load (4.2ms)[0m  SELECT  "inventories".* FROM "inventories"  ORDER BY "inventories"."id" DESC LIMIT 1
+  [1m[36mInventory Load (2.6ms)[0m  [1mSELECT  "inventories".* FROM "inventories"  ORDER BY "inventories"."id" DESC LIMIT 1[0m
+  [1m[36m (1.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.0ms)[0m  BEGIN
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "on_stocks" ("category_id", "inventory_id", "product_name", "product_type", "product_details", "quantity", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["category_id", 1], ["inventory_id", 2], ["product_name", "Hood"], ["product_type", "Retail"], ["product_details", "Hood"], ["quantity", 2], ["price", 6000], ["created_at", "2015-07-09 10:39:47.468638"], ["updated_at", "2015-07-09 10:39:47.468638"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "on_stocks" ("category_id", "inventory_id", "product_name", "product_type", "product_details", "quantity", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["category_id", 1], ["inventory_id", 2], ["product_name", "Bodykit"], ["product_type", "Retail"], ["product_details", "Sample bodykit"], ["quantity", 9], ["price", 6000], ["created_at", "2015-07-09 10:39:47.471533"], ["updated_at", "2015-07-09 10:39:47.471533"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mBEGIN[0m
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[35mOnStock Load (1.6ms)[0m  SELECT  "on_stocks".* FROM "on_stocks"  ORDER BY "on_stocks"."id" DESC LIMIT 1
+  [1m[36mOnStock Load (1.6ms)[0m  [1mSELECT  "on_stocks".* FROM "on_stocks"  ORDER BY "on_stocks"."id" DESC LIMIT 1[0m
+  [1m[35m (2.9ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "inventory_stocks" ("inventory_id", "on_stock_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["inventory_id", 2], ["on_stock_id", 3], ["created_at", "2015-07-09 10:39:47.490429"], ["updated_at", "2015-07-09 10:39:47.490429"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (2.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.9ms)[0m  INSERT INTO "logs" ("user_id", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 1], ["action", "added an item to Inventory(Stocks)."], ["created_at", "2015-07-09 10:39:47.497931"], ["updated_at", "2015-07-09 10:39:47.497931"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 48ms (Views: 0.3ms | ActiveRecord: 25.6ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "inventory_stocks" ("inventory_id", "on_stock_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["inventory_id", 2], ["on_stock_id", 3], ["created_at", "2015-07-09 10:39:47.514515"], ["updated_at", "2015-07-09 10:39:47.514515"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "logs" ("user_id", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["action", "added an item to Inventory(Stocks)."], ["created_at", "2015-07-09 10:39:47.521277"], ["updated_at", "2015-07-09 10:39:47.521277"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 200 OK in 69ms (Views: 0.4ms | ActiveRecord: 21.2ms)
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.188 at 2015-07-09 06:39:48 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[36mOnStock Load (0.6ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 64.233.173.193 at 2015-07-09 06:39:53 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by UserController#index as HTML
+  [1m[35mUserInfo Load (0.7ms)[0m  SELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered user/_dashboard.html.erb (0.1ms)
+  Rendered user/_inventory.html.erb (0.1ms)
+  Rendered user/_expenses.html.erb (0.1ms)
+  Rendered user/_estimations.html.erb (0.1ms)
+  Rendered user/_summary.html.erb (0.1ms)
+  Rendered user/index.html.erb within layouts/application (490.2ms)
+Completed 200 OK in 495ms (Views: 493.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 64.233.173.198 at 2015-07-09 06:39:56 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 49.146.198.95 at 2015-07-09 06:39:56 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.198 at 2015-07-09 06:39:57 -0400
+
+
+Started GET "//inventories/getProductOrderList" for 64.233.173.198 at 2015-07-09 06:39:57 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#getProductOrderList as HTML
+  [1m[35mProductOrder Load (0.6ms)[0m  SELECT "product_orders".* FROM "product_orders"  ORDER BY created_at asc
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+  [1m[35mUser Load (3.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+
+
+Started GET "//categories" for 64.233.173.198 at 2015-07-09 06:39:57 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mOnStock Load (0.6ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 13ms (Views: 8.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//inventories/getManufacturerList" for 64.233.173.193 at 2015-07-09 06:39:57 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 1.0ms)
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getManufacturerList as HTML
+  [1m[36mManufacturer Load (0.5ms)[0m  [1mSELECT "manufacturers".* FROM "manufacturers"  ORDER BY created_at asc[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/sort_both.png" for 64.233.173.198 at 2015-07-09 06:39:58 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_both.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (158.3ms)
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.188 at 2015-07-09 06:40:07 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[36mOnStock Load (0.9ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 6ms (Views: 4.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/sort_asc.png" for 64.233.173.188 at 2015-07-09 06:40:09 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_asc.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.6ms)
+
+
+Started POST "//inventories/createInventory" for 64.233.173.198 at 2015-07-09 06:42:55 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "//inventories/submitProductOrder" for 64.233.173.188 at 2015-07-09 06:42:55 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#createInventory as HTML
+  Parameters: {"_json"=>[{"cartID"=>"1436438542542-krrbtxd2b89nqaor", "category_id"=>3, "transaction_date"=>"2015-07-09", "manufacturer_id"=>"1", "product_name"=>"Wheels", "quantity"=>2, "price"=>10000, "product_type"=>"Retail", "product_details"=>"Wheels on wheels"}, {"cartID"=>"1436438571846-65n0wshi90gdgqfr", "category_id"=>3, "transaction_date"=>"2015-07-09", "manufacturer_id"=>"1", "product_name"=>"Windows", "quantity"=>3, "price"=>5000, "product_type"=>"Retail", "product_details"=>"Windows"}], "inventory"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#submitProductOrder as HTML
+  Parameters: {"cartID"=>"1436438542542-krrbtxd2b89nqaor", "category_id"=>3, "transaction_date"=>"2015-07-09", "manufacturer_id"=>"1", "product_name"=>"Wheels", "quantity"=>2, "price"=>10000, "product_type"=>"Retail", "product_details"=>"Wheels on wheels", "inventory"=>{"category_id"=>3, "transaction_date"=>"2015-07-09"}}
+  [1m[36m (5.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "inventories" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 1], ["created_at", "2015-07-09 10:42:55.086502"], ["updated_at", "2015-07-09 10:42:55.086502"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mInventory Load (1.2ms)[0m  SELECT  "inventories".* FROM "inventories"  ORDER BY "inventories"."id" DESC LIMIT 1
+  [1m[35m (2.5ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 10.0ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "product_orders" ("category_id", "manufacturer_id", "product_name", "quantity", "price", "product_type", "product_details", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["category_id", 3], ["manufacturer_id", 1], ["product_name", "Wheels"], ["quantity", 2], ["price", 10000], ["product_type", "Retail"], ["product_details", "Wheels on wheels"], ["inventory_id", 2], ["created_at", "2015-07-09 10:42:55.113889"], ["updated_at", "2015-07-09 10:42:55.113889"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "logs" ("user_id", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["action", "added an item from Inventory(Product Order)."], ["created_at", "2015-07-09 10:42:55.122718"], ["updated_at", "2015-07-09 10:42:55.122718"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 200 OK in 43ms (Views: 0.5ms | ActiveRecord: 10.0ms)
+
+
+Started POST "//inventories/submitProductOrder" for 64.233.173.198 at 2015-07-09 06:42:55 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#submitProductOrder as HTML
+  Parameters: {"cartID"=>"1436438571846-65n0wshi90gdgqfr", "category_id"=>3, "transaction_date"=>"2015-07-09", "manufacturer_id"=>"1", "product_name"=>"Windows", "quantity"=>3, "price"=>5000, "product_type"=>"Retail", "product_details"=>"Windows", "inventory"=>{"category_id"=>3, "transaction_date"=>"2015-07-09"}}
+  [1m[36mInventory Load (0.6ms)[0m  [1mSELECT  "inventories".* FROM "inventories"  ORDER BY "inventories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "product_orders" ("category_id", "manufacturer_id", "product_name", "quantity", "price", "product_type", "product_details", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category_id", 3], ["manufacturer_id", 1], ["product_name", "Windows"], ["quantity", 3], ["price", 5000], ["product_type", "Retail"], ["product_details", "Windows"], ["inventory_id", 3], ["created_at", "2015-07-09 10:42:55.208918"], ["updated_at", "2015-07-09 10:42:55.208918"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "logs" ("user_id", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 1], ["action", "added an item from Inventory(Product Order)."], ["created_at", "2015-07-09 10:42:55.216497"], ["updated_at", "2015-07-09 10:42:55.216497"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "//inventories/getProductOrderList" for 64.233.173.188 at 2015-07-09 06:42:55 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#getProductOrderList as HTML
+  [1m[35mProductOrder Load (0.7ms)[0m  SELECT "product_orders".* FROM "product_orders"  ORDER BY created_at asc
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "//inventories/getProductOrderList" for 64.233.173.198 at 2015-07-09 06:42:56 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getProductOrderList as HTML
+  [1m[36mProductOrder Load (0.7ms)[0m  [1mSELECT "product_orders".* FROM "product_orders"  ORDER BY created_at asc[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 64.233.173.188 at 2015-07-09 06:43:02 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by UserController#index as HTML
+  [1m[35mUserInfo Load (0.9ms)[0m  SELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered user/_dashboard.html.erb (0.1ms)
+  Rendered user/_inventory.html.erb (0.1ms)
+  Rendered user/_expenses.html.erb (0.1ms)
+  Rendered user/_estimations.html.erb (0.1ms)
+  Rendered user/_summary.html.erb (0.1ms)
+  Rendered user/index.html.erb within layouts/application (511.1ms)
+Completed 200 OK in 516ms (Views: 514.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 64.233.173.193 at 2015-07-09 06:43:05 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 49.146.198.95 at 2015-07-09 06:43:06 -0400
+Cannot render console from 49.146.198.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.188 at 2015-07-09 06:43:06 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getProductOrderList" for 64.233.173.193 at 2015-07-09 06:43:06 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#getProductOrderList as HTML
+  [1m[36mOnStock Load (4.3ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 11ms (Views: 3.9ms | ActiveRecord: 4.3ms)
+  [1m[35mProductOrder Load (5.1ms)[0m  SELECT "product_orders".* FROM "product_orders"  ORDER BY created_at asc
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "//categories" for 64.233.173.193 at 2015-07-09 06:43:06 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getManufacturerList" for 64.233.173.188 at 2015-07-09 06:43:06 -0400
+Cannot render console from 64.233.173.188! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#getManufacturerList as HTML
+  [1m[36mCategory Load (4.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 13ms (Views: 1.1ms | ActiveRecord: 4.8ms)
+  [1m[35mManufacturer Load (3.3ms)[0m  SELECT "manufacturers".* FROM "manufacturers"  ORDER BY created_at asc
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/images/sort_both.png" for 64.233.173.198 at 2015-07-09 06:43:06 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_both.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (168.4ms)
+
+
+Started GET "//inventories/getInventoryStocks" for 64.233.173.198 at 2015-07-09 06:43:17 -0400
+Cannot render console from 64.233.173.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[35mOnStock Load (0.9ms)[0m  SELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc
+Completed 0  in 6ms (Views: 4.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/sort_asc.png" for 64.233.173.193 at 2015-07-09 06:43:19 -0400
+Cannot render console from 64.233.173.193! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_asc.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (168.1ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 07:53:19 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (163.4ms)
+
+
+Started GET "/" for 211.147.2.192 at 2015-07-09 08:40:37 -0400
+Cannot render console from 211.147.2.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as */*
+  Rendered devise/sessions/new.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 09:25:26 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.5ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 11:03:53 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.5ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (172.2ms)
+
+
+Started GET "/phpMyAdmin/scripts/setup.php" for 187.192.0.201 at 2015-07-09 11:52:00 -0400
+Cannot render console from 187.192.0.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/phpMyAdmin/scripts/setup.php"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (181.3ms)
+
+
+Started GET "/pma/scripts/setup.php" for 187.192.0.201 at 2015-07-09 11:52:01 -0400
+Cannot render console from 187.192.0.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/pma/scripts/setup.php"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (175.3ms)
+
+
+Started GET "/myadmin/scripts/setup.php" for 187.192.0.201 at 2015-07-09 11:52:02 -0400
+Cannot render console from 187.192.0.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/myadmin/scripts/setup.php"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (178.7ms)
+
+
+Started GET "/" for 112.198.103.102 at 2015-07-09 12:01:38 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min-ee5ad64559f80c8d10a7b2081f357b0e.css?body=1" for 112.198.103.102 at 2015-07-09 12:01:38 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/login-a2177eadd57aa45bd5e42fa2cb8458e2.css?body=1" for 112.198.103.102 at 2015-07-09 12:01:39 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome-726dc0a21ad992b21cf5ce3ac42ed434.css?body=1" for 112.198.103.102 at 2015-07-09 12:01:39 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/styles.css" for 112.198.103.102 at 2015-07-09 12:01:39 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/fontawesome-webfont-0467547b77a16198ec62b150e91d5f91.woff?v=4.3.0" for 112.198.103.102 at 2015-07-09 12:01:40 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/logo-def1c66f1f2baee8e5cdc231e6f602c7.png" for 112.198.103.102 at 2015-07-09 12:01:40 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/sign_in" for 112.198.103.102 at 2015-07-09 12:02:26 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vIglA+UcdyycGzN/8zpj2p3hzk+ZW+SJe0tsLsMoAeQSk1iUIPH+RRrxhSHwBhtGRI79mGi/l7iNe8uAKvXgkQ==", "user"=>{"email"=>"secretary@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "secretary@gmail.com"]]
+Completed 401 Unauthorized in 8ms (ActiveRecord: 1.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vIglA+UcdyycGzN/8zpj2p3hzk+ZW+SJe0tsLsMoAeQSk1iUIPH+RRrxhSHwBhtGRI79mGi/l7iNe8uAKvXgkQ==", "user"=>{"email"=>"secretary@gmail.com", "password"=>"[FILTERED]"}}
+  Rendered devise/sessions/new.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 231ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 112.198.103.102 at 2015-07-09 12:02:34 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8KK/C+6GscoLXwUK+9BhxvXcUmdxO0iBfGB3Py0iPsdeucKcK2s4o421s1T47BlaLLNhsIDfO7CKUNCRxP/fsg==", "user"=>{"email"=>"secretary@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "secretary@gmail.com"]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.8ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8KK/C+6GscoLXwUK+9BhxvXcUmdxO0iBfGB3Py0iPsdeucKcK2s4o421s1T47BlaLLNhsIDfO7CKUNCRxP/fsg==", "user"=>{"email"=>"secretary@gmail.com", "password"=>"[FILTERED]"}}
+  Rendered devise/sessions/new.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 264ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 112.198.103.102 at 2015-07-09 12:02:39 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9IkLhfKmrzngYdBFqjeUF3VKbKNeaxF9vWo+iqa4+/NaknYSN0smUGaLZhupC+yLrCVfdK+PYkxLWpkkT2Uahg==", "user"=>{"email"=>"secretary@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "secretary@gmail.com"]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.6ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9IkLhfKmrzngYdBFqjeUF3VKbKNeaxF9vWo+iqa4+/NaknYSN0smUGaLZhupC+yLrCVfdK+PYkxLWpkkT2Uahg==", "user"=>{"email"=>"secretary@gmail.com", "password"=>"[FILTERED]"}}
+  Rendered devise/sessions/new.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 257ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 112.198.103.102 at 2015-07-09 12:02:42 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"srFncPDo2CpI9ME90xqDby7rCnJ5UeHRDRyrKM02gAkcqhrnNQVRQ84ed2PQJvvz94Q5pYi1kuD7LAyGJOthfA==", "user"=>{"email"=>"secretary@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "secretary@gmail.com"]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.7ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"srFncPDo2CpI9ME90xqDby7rCnJ5UeHRDRyrKM02gAkcqhrnNQVRQ84ed2PQJvvz94Q5pYi1kuD7LAyGJOthfA==", "user"=>{"email"=>"secretary@gmail.com", "password"=>"[FILTERED]"}}
+  Rendered devise/sessions/new.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 255ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 112.198.103.102 at 2015-07-09 12:02:59 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8izd4/KzLqBlFY8SpW3/1us0MZfBKwmxNCEX11G5yQxcN6B0N16nyeP/OUymUYdKMlsCQDDPeoDCEbB5uGQoeQ==", "user"=>{"email"=>"allan.alzula@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "allan.alzula@gmail.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "current_sign_in_ip" = $3, "sign_in_count" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["last_sign_in_at", "2015-07-09 10:24:02.789146"], ["current_sign_in_at", "2015-07-09 16:03:00.048877"], ["current_sign_in_ip", "112.198.103.102/32"], ["sign_in_count", 8], ["updated_at", "2015-07-09 16:03:00.052631"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  COMMIT
+Redirected to http://128.199.117.211/
+Completed 302 Found in 210ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 112.198.103.102 at 2015-07-09 12:03:00 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by UserController#index as HTML
+  [1m[36mUserInfo Load (0.8ms)[0m  [1mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered user/_dashboard.html.erb (0.1ms)
+  Rendered user/_inventory.html.erb (0.1ms)
+  Rendered user/_expenses.html.erb (0.1ms)
+  Rendered user/_estimations.html.erb (0.1ms)
+  Rendered user/_summary.html.erb (0.1ms)
+  Rendered user/index.html.erb within layouts/application (430.4ms)
+Completed 200 OK in 435ms (Views: 433.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/metisMenu.min-a34a9b352bd98308f2ed8a027d2ee7b2.css?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sb-admin-2-d9b7846bca7b33bb83973fa8aedc7c9e.css?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap-5df589bd327521175578e0c04595168e.css?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/styles-07b4cf2bbd5304f1dc6bb687466e739e.css?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/admin-0e187027c5522dd8a0adb502e255c000.css?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-a6169f219ddb6d53e160824dc13b81ff.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs-3eb12d3929493e3ce48938b7dbef9b83.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min-078b4dd115a7dc4382908fb99f7880a7.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/metisMenu-f147cbb8e7395646868caf21d69c89bb.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.dataTables.min-be9d1e3fdb8e8e817e4367efc853318e.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min-c59654c1feff62f2a6602eaf328aff0d.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:01 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sb-admin-2-ef7b13f2043578836314287a9416aee7.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:02 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scripts/angular-62cd220ce73d6e3e6dd806cd4cc13e59.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:02 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/angular-datatables.min-b16f80328560189cea5758c64d2ff63f.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:02 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/angular-rails-templates-c14a529f49647046aa4ab202b83ad36d.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:02 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scripts/app-1925ef39df27199095192051e9b14d54.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:04 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scripts/factory-aa1e2a6b1090ae35800128dea17a865a.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:04 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scripts/directive-f75f8b58892c8c829f24f9723e48b5f9.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:04 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scripts/controller-dabefa73984c13f005115a5ca3d01835.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:04 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dashboard-template-919e6969fe9aa8867813cc643464b9f3.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:05 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/materialize.min-f1f6bcb26f57a11c30ed85e24fe17ed6.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:05 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/estimation-add-template-cde396784331e851aedd2d409b1f385c.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:06 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/estimation-view-template-4d49fefdbfd2331ff9edd0516638407c.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:06 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/expense-add-template-7c08500fe8c9e6fe9f794684a608fc71.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:06 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/expense-view-template-0429ef922f21d126bddfc1d592391602.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:07 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/inventory-add-template-eed2f8ee81971968b7a834a393497adb.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:07 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/inventory-view-template-700318f8ba359cdb71abd3455f2dfb79.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:07 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/summary-view-template-8f8a3b36d842b5e49210f39a3ddd6328.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:07 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application-38e4f3e743f6afa5b9758d59c42333a0.js?body=1" for 112.198.103.102 at 2015-07-09 12:03:07 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/user-8aa97d00fe74ef01cbfeaf98bcc9f77d.jpg" for 112.198.103.102 at 2015-07-09 12:03:20 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getProductOrderList" for 112.198.103.102 at 2015-07-09 12:03:21 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getInventoryStocks" for 112.198.103.102 at 2015-07-09 12:03:21 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by InventoriesController#getProductOrderList as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[35mProductOrder Load (2.2ms)[0m  SELECT "product_orders".* FROM "product_orders"  ORDER BY created_at asc
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 2.2ms)
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[36mOnStock Load (0.3ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//categories" for 112.198.103.102 at 2015-07-09 12:03:21 -0400
+
+
+Started GET "//inventories/getManufacturerList" for 112.198.103.102 at 2015-07-09 12:03:21 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (4.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (3.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getManufacturerList as HTML
+  [1m[35mCategory Load (5.0ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 15ms (Views: 1.6ms | ActiveRecord: 9.8ms)
+  [1m[36mManufacturer Load (4.4ms)[0m  [1mSELECT "manufacturers".* FROM "manufacturers"  ORDER BY created_at asc[0m
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/OpenSans-Regular-f3d1c6881b5338705a9ddf79a3a5848f.ttf" for 112.198.103.102 at 2015-07-09 12:03:21 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "//inventories/getInventoryStocks" for 112.198.103.102 at 2015-07-09 12:03:31 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by InventoriesController#getInventoryStocks as HTML
+  [1m[36mOnStock Load (0.7ms)[0m  [1mSELECT "on_stocks".* FROM "on_stocks"  ORDER BY created_at desc[0m
+Completed 0  in 5ms (Views: 4.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/sort_asc.png" for 112.198.103.102 at 2015-07-09 12:04:05 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_asc.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+
+
+Started GET "/images/sort_both.png" for 112.198.103.102 at 2015-07-09 12:04:05 -0400
+Cannot render console from 112.198.103.102! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/sort_both.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (24.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (23.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (23.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (381.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (338.0ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 12:40:53 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (135.3ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 14:15:32 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (190.3ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 15:49:56 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (178.3ms)
+
+
+Started GET "/" for 54.188.19.91 at 2015-07-09 17:04:14 -0400
+Cannot render console from 54.188.19.91! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 17:23:43 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (165.6ms)
+
+
+Started GET "/" for 180.76.15.157 at 2015-07-09 18:10:34 -0400
+Cannot render console from 180.76.15.157! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as */*
+  Rendered devise/sessions/new.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 18:59:54 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (168.2ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 20:37:55 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (187.8ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 22:17:17 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 22:17:17 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (32.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (390.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (415.9ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-09 23:55:58 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (174.5ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-10 01:41:36 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.6ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-10 03:28:03 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (173.5ms)
+
+
+Started GET "/cgi-bin/chs/numreg/init" for 58.218.213.208 at 2015-07-10 03:28:04 -0400
+Cannot render console from 58.218.213.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/cgi-bin/chs/numreg/init"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (198.7ms)
+
+
+Started GET "/phpMyAdmin/scripts/setup.php" for 201.153.201.62 at 2015-07-10 04:01:40 -0400
+Cannot render console from 201.153.201.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/phpMyAdmin/scripts/setup.php"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.8ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (179.2ms)
+
+
+Started GET "/pma/scripts/setup.php" for 201.153.201.62 at 2015-07-10 04:01:40 -0400
+Cannot render console from 201.153.201.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/pma/scripts/setup.php"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (168.4ms)
+
+
+Started GET "/myadmin/scripts/setup.php" for 201.153.201.62 at 2015-07-10 04:01:41 -0400
+Cannot render console from 201.153.201.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/myadmin/scripts/setup.php"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.5ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (169.8ms)
+
+
+Started GET "/webdav/" for 37.59.28.13 at 2015-07-10 04:08:26 -0400
+Cannot render console from 37.59.28.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/webdav"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
+  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.9.0) bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.2.2/bin/unicorn_rails:23:in `<main>'
+
+
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.7ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /root/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (169.5ms)
