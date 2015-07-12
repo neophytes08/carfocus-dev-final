@@ -688,7 +688,6 @@ app
           $scope.getServices();
           $scope.getExistingCustomer();
         });
-
     }
   ])
   .controller('estimationViewCtrl', [
