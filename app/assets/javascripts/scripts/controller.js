@@ -657,10 +657,10 @@ app
 
       // load functions
       $scope.getServices();
-      $(".existing_customer_lists_wrapper").select2({
-          placeholder: "Search for existing customer",
-          allowClear: false
-      }).enable(false);
+      // $(".existing_customer_lists_wrapper").select2({
+      //     placeholder: "Search for existing customer",
+      //     allowClear: false
+      // }).enable(false);
     }
   ])
   .controller('estimationViewCtrl', [
