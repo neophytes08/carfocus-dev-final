@@ -1,7 +1,4 @@
 class ProductOrder < ActiveRecord::Base
-  has_many :manufacturers
-
-  def self.primay_key
-    'product_order_' + super
-  end
+  belongs_to :stocks
+  # validates :stock_id, :manufacturer_id, :product_type, presence: true
 end

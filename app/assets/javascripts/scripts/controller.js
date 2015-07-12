@@ -12,7 +12,6 @@ app
         CarServer.request("post", '/manufacturers/submitManufacturer',
         function(response){
           console.log(response);
-          $('#settings').modal('hide');
         }, $scope.manufacturerData);
       }
     }
@@ -24,7 +23,6 @@ app
     "$timeout",
     function controller($scope, $http, CarServer, $timeout)
     {
-      console.log("inventoryViewCtrl");
       $scope.onStockList = {};
       $scope.dirPurchList = {};
       $scope.productOrderList = {};
@@ -50,7 +48,7 @@ app
         });
       }
       /*----- Get list of Product Order -----*/
-      $scope.displayDirectPurchaseList = function displayDirectPurchaseList(){
+      $scope.getProductOrderList = function getProductOrderList(){
         CarServer.request("get", "/inventories/getProductOrderList",
         function(response){
           console.log( response );
@@ -70,14 +68,6 @@ app
             $scope.displayDirectPurchaseList();
           }
         } );
-
-      /*----- View Individual Product on Tables -----*/
-      // $scope.viewProduct = function viewProduct( id ){
-      //   CarServer.request("get", "/inventories/getInventoryStocks",
-      //   function(response){
-      //     console.log( response );
-      //   });
-      // }
       
       /*----- Transfer Info to modal -----*/
       $scope.displayProductInfo = function displayProductInfo( list , action ){
@@ -145,8 +135,11 @@ app
       }
 
       /* Display all inventory table Lists */
-      $scope.displayOnStockList();
+      $scope.$on( "show-inventory-view" , 
+        function onReceive(){
+           $scope.displayOnStockList();
       $scope.displayDirectPurchaseList();
+      }); 
     }
   ])
   .controller('inventoryAddCtrl', [
@@ -157,7 +150,6 @@ app
     "$rootScope",
     function controller($scope, $http, CarServer , $timeout, $rootScope)
     {
-      console.log("inventoryAddCtrl");
       $scope.categoryList = {};
       $scope.manufacturerList = {};
       $scope.list = {};
@@ -177,7 +169,6 @@ app
       $scope.addOnStock = [];
 
       $scope.lists = [ 
-          { 'value' : 'on-stock' , 'category' : 'On Stock'  }, 
           { 'value' : 'direct-purchase' , 'category' : 'Direct Purchase'  }, 
           { 'value' : 'product-order' , 'category' : 'Product Order'  }
       ];
@@ -206,46 +197,6 @@ app
         });
       }
 
-      // Add On Stock to Basket 
-       $scope.addToBasketStock = function addToBasketStock(){
-        
-
-        console.log( 'Added to On Stock basket' );
-        console.log($scope.inventoryData);
-        var today = new Date();
-        var randomID = new Date().getTime() + '-' + Math.random().toString(36).slice(2);
-        var totalQuantityPrice = parseFloat( $scope.inventoryData.price ) * parseFloat( $scope.inventoryData.quantity );
-        var htmlList = '<li>'
-                     + '<button priceQtyValue="'+totalQuantityPrice+'" id="' + randomID + '" class="btn btn-default btn-remove-stock-order" data-toggle="tooltip" data-placement="left" title="Click to Remove"><i class="fa fa-minus"></i></button>' 
-                     + '<label><a href="#" id="'+ randomID +'" data-toggle="modal" class="edit-selection" data-target="#modal-edit-selection" >'+ $scope.inventoryData.product_name +'</a></label>'
-                     + '<span class="price pull-right">Php <span class="price-value">' + totalQuantityPrice + '</span></span>'
-                     + '</li>';
-        $( '#basket-ordered-lists' ).append( htmlList );
-
-        $scope.addOnStock.push({ 
-          'cartID'            : randomID,
-          'category_id'       : 1 ,  
-          'transaction_date'  : today.toISOString().substring(0, 10) ,
-          'product_name'      : $scope.inventoryData.product_name ,
-          'product_details'   : $scope.inventoryData.product_details ,
-          'product_type'      : $scope.inventoryData.product_type,
-          'price'             : $scope.inventoryData.price ,
-          'quantity'          : $scope.inventoryData.quantity
-        });
-
-        disabledButton();
-        console.log($scope.addOnStock.length);
-        $scope.inventoryData.price = "";
-        $scope.inventoryData.product_name = "";
-        $scope.inventoryData.product_details = "";
-        $scope.inventoryData.product_type = "";
-        $scope.inventoryData.quantity = "";
-
-        getTotal( totalQuantityPrice , '+' );
-       
-       }
-
-
       // Add Direct Purchase to Basket 
       $scope.addToBasketDirPurch = function addToBasketDirPurch(){
         console.log( 'Added to On Stock basket' );
@@ -262,11 +213,11 @@ app
         
         $scope.addOnStock.push({ 
           'cartID'           : randomID,
-          'category_id'      : 2,  
+          'category_id'      : 1,  
           'transaction_date' : today.toISOString().substring(0, 10),
           'or_no'            : $scope.inventoryData.or_no,
           'in_charge'        : $scope.inventoryData.in_charge,
-          'cash_on_hand'     : $scope.inventoryData.cash_on_hand,
+          'cash_onhand'      : $scope.inventoryData.cash_onhand,
           'store_name'       : $scope.inventoryData.store_name,
           'product_name'     : $scope.inventoryData.product_name, 
           'quantity'         : $scope.inventoryData.quantity, 
@@ -279,7 +230,7 @@ app
         $scope.inventoryData.product_details = "";
         $scope.inventoryData.price = "";
         $scope.inventoryData.quantity = "";  
-        
+        console.log($scope.addOnStock);
         getTotal( totalQuantityPrice , '+' );
       }
 
@@ -300,7 +251,7 @@ app
 
         $scope.addOnStock.push({ 
           'cartID'            : randomID,
-          'category_id'       : 3,
+          'category_id'       : 2,
           'transaction_date'  : today.toISOString().substring(0, 10) ,
           'manufacturer_id'   : $scope.inventoryData.manufacturer_id ,
           'product_name'      : $scope.inventoryData.product_name ,
@@ -387,22 +338,18 @@ app
 
       // add inventory data
       $scope.showCategoryForm = function showCategoryForm( categoryType ) {
+        console.log( categoryType )
+        if (categoryType.value == 'direct-purchase') {
+          $( '.form-wrapper' ).css( 'display','none' );
+          $( '.form-' + categoryType.value ).show();
         
-        if (categoryType.value == 'on-stock') {
-          $( '.form-wrapper' ).css( 'display','none' );
-          $( '.form-' + categoryType.value ).show();
-
-        } else if(categoryType.value == 'direct-purchase') {
-          $( '.form-wrapper' ).css( 'display','none' );
-          $( '.form-' + categoryType.value ).show();
-
-        } else if(categoryType.value == 'product-order') {
+        }else if(categoryType.value == 'product-order') {
           $( '.form-wrapper' ).css( 'display','none' );
           $( '.form-' + categoryType.value ).show();
 
         } else {
           $( '.form-wrapper' ).css( 'display','none' );
-          $( '.form-on-stock' ).show();
+          $( '.form-direct-purchase' ).show();
         };
         totalAmount = 0;
         resetData();
@@ -435,24 +382,24 @@ app
 
           if ( $scope.addOnStock.length > 0 ) {
             switch( $scope.addOnStock[x].category_id ) {
-              case 1: // Insert On Stock Products
-              console.log($scope.addOnStock[x]);
-                CarServer.request( "post" , "/inventories/submitStock" , 
-                  function( response ) {
-                    console.log( 'success on-stock' )
-                    $scope.showLoadState = false;
-                    $scope.hideLoadState = true;
-                    $scope.successLoadState = true;  
-                    $timeout( function(){
-                      $scope.successLoadState = false;
-                      $scope.hideLoadState = false;
-                      resetData();
-                    }, 3000 );
-                    $rootScope.$broadcast( 'loadTableData', 'onStock' );
-                } , $scope.addOnStock[x] );
-                break;
+              // case 1: // Insert On Stock Products
+              // console.log($scope.addOnStock[x]);
+              //   CarServer.request( "post" , "/inventories/submitStock" , 
+              //     function( response ) {
+              //       console.log( 'success on-stock' )
+              //       $scope.showLoadState = false;
+              //       $scope.hideLoadState = true;
+              //       $scope.successLoadState = true;  
+              //       $timeout( function(){
+              //         $scope.successLoadState = false;
+              //         $scope.hideLoadState = false;
+              //         resetData();
+              //       }, 3000 );
+              //       $rootScope.$broadcast( 'loadTableData', 'onStock' );
+              //   } , $scope.addOnStock[x] );
+              //   break;
 
-              case 2: // Insert Direct Purchase Products
+              case 1: // Insert Direct Purchase Products
                 CarServer.request( "post" , "/inventories/submitDirectPurchase" , 
                   function( response ) {
                     console.log( 'success direct-purchase' );
@@ -469,7 +416,7 @@ app
                 } , $scope.addOnStock[x] );
                 break;
 
-              case 3: // Insert Product Orders
+              case 2: // Insert Product Orders
               console.log($scope.addOnStock[x]);
                 CarServer.request( "post" , "/inventories/submitProductOrder" , 
                   function( response ) {
@@ -534,10 +481,13 @@ app
 
 
       // load functions
-      $scope.getInventoryStocks();
-      // $scope.getInventories();
-      $scope.categories();
-      $scope.manufacturers();
+       $scope.$on( "show-inventory-add" , 
+        function onReceive(){
+            $scope.getInventoryStocks();
+            $scope.categories();
+            $scope.manufacturers();
+      }); 
+     
     }
   ])
   .controller('expenseAddCtrl', [
@@ -546,7 +496,11 @@ app
     "CarServer",
     function controller($scope, $http, CarServer)
     {
-      console.log("expenseAddCtrl");
+
+      $scope.$on( "show-expense-add" , 
+        function onReceive ( ) {
+          
+        });
     }
   ])
   .controller('expenseViewCtrl', [
@@ -556,19 +510,30 @@ app
     function controller($scope, $http, CarServer)
     {
       console.log("expenseViewCtrl");
+      $scope.$on( "show-expense-view" , 
+        function onReceive ( ) {
+          
+        });
     }
   ])
-  .controller('esitmationAddCtrl', [
+  .controller('estimationAddCtrl', [
     "$scope",
     "$http",
     "CarServer",
     function controller($scope, $http, CarServer)
     {
-      console.log("esitmationAddCtrl");
+      localStorage.clear();
+
+      var localStoredServices = [];
+
       $scope.serviceList = {};
       $scope.showServiceStatus = false;
       $scope.serviceDetails = {};
-      // $scope.serviceDetailLists = {};
+      $scope.customerLists = {};
+      $scope.noCustomerExist = false;
+      $scope.customerExist = false;
+      $scope.userInfo = {};
+      $scope.jobOrderInfo = {};
 
       $scope.serviceDataToModal = {};
       $scope.servicePushToBox = [];
@@ -587,14 +552,44 @@ app
 
       /*----- Display Existing Customer -----*/
       $scope.getExistingCustomer = function getExistingCustomer() {
-        CarServer.request("get", "/job_orders/submitJobOrder",
+        CarServer.request("get", "/customers/getCustomerInfo",
           function(response){
-            console.log(response);
-            $scope.serviceList = response;
+            $scope.customerLists = response;
           });
+      }
+      /*----- Search Existing Customer -----*/
+      $scope.submitCustomerQuery = function submitCustomerQuery( searchQuery ) {
+        console.log(  searchQuery  );
+        $scope.noCustomerExist = true;
+        $scope.customerExist = true;
+        $scope.jobOrderInfo.customer_exist = true;
+        $scope.jobOrderInfo.id = searchQuery.id;
+        $scope.userInfo.fullname = searchQuery.fullname;
+        $scope.userInfo.contact_no = searchQuery.contact_no;
+        $scope.userInfo.address = searchQuery.address;
+      }
+      $scope.addCustomerInfoManually = function addCustomerInfoManually() {
+        $scope.noCustomerExist = false;
+        $scope.customerExist = false;
+        $scope.jobOrderInfo.customer_exist = false;
+        $scope.jobOrderInfo.id = '';
+        $scope.userInfo.fullname = '';
+        $scope.userInfo.contact_no = '';
+        $scope.userInfo.address = '';
+      }
+      /*----- Add Payment Type -----*/
+      $scope.setPaymentType = function setPaymentType( type ) {
+        $scope.jobOrderInfo.payment_method = type;
+      }
+
+      /*----- SUBMIT JOB ORDER -----*/
+      $scope.submitJobOrder = function submitJobOrder() {
+        console.log( $scope.jobOrderInfo );
+        alert( 'test' )
       }
 
       /*----- Show selected status on alert box ( green ,red , yellow, blue) ------*/
+      /*----- Displays the selected services -----*/
       $scope.displayService = function displayService( service ) {
         $scope.showServiceStatus = true;
         var randomID = new Date().getTime() + '-' + Math.random().toString(36).slice(2);
@@ -609,30 +604,46 @@ app
 
       /*------ Remove Selected Service with alert box ( green ,red , yellow, blue) ------*/
       $scope.removeSelectedService = function removeSelectedService(service) {
+        var getBoxTotalAmount = null;
         var totalTobeSubtracted = 0;
-        for( x in $scope.selectedServices ) {
+        /*----- Get the largest Total amount value -----*/
+        getBoxTotalAmount = getSum( localStoredServices );
+        // console.log( getSum( localStoredServices ))
+        for( x in $scope.selectedServices ) { // Loop for Service Box 
           if( $scope.selectedServices[x].randomID == service.randomID ){
             $scope.selectedServices.splice(x,1);
             $( 'option[label='+service.service_name+']' ).removeAttr( 'disabled' );
-            // $scope.servicePushToBox = [];
-            for( y in $scope.servicePushToBox ) {
-              // console.log( $scope.servicePushToBox[y].randomID )
-              if ( $scope.servicePushToBox[y].randomID == service.randomID ) {
-                console.log($scope.servicePushToBox[y].amount)
-                 totalTobeSubtracted = totalTobeSubtracted + $scope.servicePushToBox[y].amount ;
-                 $scope.servicePushToBox.splice(y,1);
-                 console.log( 'total '+totalTobeSubtracted );
-              };
-            }
           }
         }
-        $scope.totalServiceAmountDetailPerBox = $scope.totalServiceAmountDetailPerBox - totalTobeSubtracted;
-        console.log( '$scope.servicePushToBox' )
-        console.log(  $scope.totalServiceAmountDetailPerBox + '=' + $scope.totalServiceAmountDetailPerBox + ' - ' +totalTobeSubtracted )
-        console.log( $scope.totalServiceAmountDetailPerBox );
 
+        var setNewValue = [];
+        for( z in localStoredServices ) {
+          if (localStoredServices[z].boxID == service.randomID) {
+            totalTobeSubtracted += localStoredServices[z].serviceAmount;
+          }else {
+            console.log( '--------else---------' );
+            console.log( localStoredServices[z] );
+            setNewValue.push({
+              'service_id' : service.id,
+              'boxID' : localStoredServices[z].boxID,
+              'totalBoxAmount' : localStoredServices[z].totalBoxAmount,
+              'serviceAmount' : localStoredServices[z].serviceAmount
+            });
+          }
+        }
+        localStoredServices = setNewValue;
+        $scope.jobOrderInfo.job_details = setNewValue;
+        $scope.totalServiceAmountDetailPerBox =  getSum(localStoredServices);
       }
 
+      /*----- Gets the largest Total amount value -----*/
+      function getSum( dataArr ) {
+        var sum = 0;
+        for ( x in dataArr ){
+          sum += dataArr[x].serviceAmount;
+        }
+        return sum;
+      }
 
       /*------ Save service data list to modal ------*/
       $scope.saveToModalAdd = function saveToModalAdd( service ) {
@@ -649,18 +660,35 @@ app
             addedValue = $scope.servicePushToBox[x].amount;
           };
         }
+
         $scope.totalServiceAmountDetailPerBox = $scope.totalServiceAmountDetailPerBox + addedValue;
         $scope.serviceDetails = {};
         $('#modal-add-service-detail').modal('hide');
+
+        /*----- Add total amount and data to localStoredServices -----*/
+        localStoredServices.push({
+          'service_id' : boxData.service_id,
+          'boxID' : boxData.randomID,
+          'totalBoxAmount' : $scope.totalServiceAmountDetailPerBox,
+          'serviceAmount' : addedValue
+        });
+        $scope.jobOrderInfo.job_details = localStoredServices;
+        console.log( localStoredServices );
       }
 
 
       // load functions
-      $scope.getServices();
+      
       $(".existing_customer_lists_wrapper").select2({
           placeholder: "Search for existing customer",
           allowClear: false
-      }).enable(false);
+      });
+      $scope.$on( "show-estimation-add" , 
+        function onReceive ( ) {
+          $scope.getServices();
+          $scope.getExistingCustomer();
+        });
+
     }
   ])
   .controller('estimationViewCtrl', [
@@ -669,7 +697,10 @@ app
     "CarServer",
     function controller($scope, $http, CarServer)
     {
-      console.log("estimationViewCtrl");
+      $scope.$on( "show-expense-view" , 
+        function onReceive ( ) {
+          
+        });
     }
   ])
   .controller('summaryViewCtrl', [
@@ -678,6 +709,21 @@ app
     "CarServer",
     function controller($scope, $http, CarServer)
     {
-      console.log("summaryViewCtrl");
+      $scope.$on( "show-summary" , 
+        function onReceive ( ) {
+          
+        });
+    }
+  ])
+  .controller('customerCtrl', [
+    "$scope",
+    "$http",
+    "CarServer",
+    function controller($scope, $http, CarServer)
+    {
+      $scope.$on( "show-customer" , 
+        function onReceive ( ) {
+          
+        });
     }
   ]);

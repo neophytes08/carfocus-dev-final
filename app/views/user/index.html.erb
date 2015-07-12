@@ -51,7 +51,7 @@
             </ul>
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
+            <div class="navbar-default sidebar" role="navigation" navigation-app>
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
@@ -102,37 +102,37 @@
             <div class="container-fluid">
                 <div class="row">
                 <% if current_user.user_type == 'admin' %>
-                   <section template="dashboard" template-name="dashboard-template.html" class="hidden" class="" template-ctrl="dashBoardCtrl"></section>
-                   <section template="inventory-view" template-name="inventory-view-template.html" class="hidden" template-ctrl="inventoryViewCtrl"></section>
-                   <section template="inventory-add" template-name="inventory-add-template.html" class="hidden" template-ctrl="inventoryAddCtrl"></section>
-                   <section template="expense-add" template-name="expense-add-template.html" class="hidden" template-ctrl="expenseAddCtrl"></section>
-                   <section template="expense-view" template-name="expense-view-template.html" class="hidden" template-ctrl="expenseViewCtrl"></section>
-                   <section template="estimation-add" template-name="estimation-add-template.html" class="" template-ctrl="esitmationAddCtrl"></section>
-                   <section template="estimation-view" template-name="estimation-view-template.html" class="hidden" template-ctrl="estimationViewCtrl"></section>
-                   <section template="customer" template-name="customer-template.html" template-ctrl="dashBoardCtrl" class="hidden"></section>
-                   <section template="summary-view" template-name="summary-view-template.html" class="hidden" template-ctrl="summaryViewCtrl"></section>
+                   <section class="hidden" dashboard></section>
+                   <section class="hidden" inventory-view></section>
+                   <section class="hidden" inventory-add></section>
+                   <section class="hidden" expense-view></section>
+                   <section class="hidden" expense-add></section>
+                   <section class="" estimation-add></section>
+                   <section class="hidden" estimation-view></section>
+                   <section class="hidden" customer></section>
+                   <section class="hidden" summary></section>
 
                 <% elsif current_user.user_type == 'regular' %>
-                  <section template="estimation-add" template-name="estimation-add-template.html" template-ctrl="esitmationAddCtrl"></section>
-                   <section template="estimation-view" template-name="estimation-view-template.html" class="hidden" template-ctrl="estimationViewCtrl"></section>
+                  <section estimation-add></section>
+                   <section class="hidden" estimation-view></section>
 
                 <% elsif current_user.user_type == 'secretary' %>
-                  <section template="dashboard" template-name="dashboard-template.html" class="hidden" template-ctrl="dashBoardCtrl"></section>
-                  <section template="inventory-view" template-name="inventory-view-template.html" template-ctrl="inventoryViewCtrl"></section>
-                  <section template="inventory-add" template-name="inventory-add-template.html" class="hidden" template-ctrl="inventoryAddCtrl"></section>
-                  <section template="estimation-add" template-name="estimation-add-template.html" class="hidden" template-ctrl="esitmationAddCtrl"></section>
-                   <section template="estimation-view" template-name="estimation-view-template.html" class="hidden" template-ctrl="estimationViewCtrl"></section>
-                   <section template="expense-add" template-name="expense-add-template.html" class="hidden" template-ctrl="expenseAddCtrl"></section>
-                   <section template="expense-view" template-name="expense-view-template.html" class="hidden" template-ctrl="expenseViewCtrl"></section>
-                   <section template="customer" template-name="customer-template.html" template-ctrl="dashBoardCtrl" class="hidden"></section>
-                   <section template="summary-view" template-name="summary-view-template.html" class="hidden" template-ctrl="summaryViewCtrl"></section>
+                  <section class="" dashboard></section>
+                   <section class="hidden" inventory-view></section>
+                   <section class="hidden" inventory-add></section>
+                   <section class="hidden" expense-view></section>
+                   <section class="hidden" expense-add></section>
+                   <section class="hidden" estimation-add></section>
+                   <section class="hidden" estimation-view></section>
+                   <section class="hidden" customer></section>
+                   <section class="hidden" summary></section>
 
                 <% elsif current_user.user_type == 'co-owner' %>
-                   <section template="dashboard" template-name="dashboard-template.html" class="hidden" template-ctrl="dashBoardCtrl"></section>
-                   <section template="inventory-view" template-name="inventory-view-template.html" template-ctrl="inventoryViewCtrl"></section>
-                    <section template="estimation-view" template-name="estimation-view-template.html" class="hidden" template-ctrl="estimationViewCtrl"></section>
-                    <section template="expense-view" template-name="expense-view-template.html" class="hidden" template-ctrl="expenseViewCtrl"></section>
-                   <section template="summary-view" template-name="summary-view-template.html" class="hidden" template-ctrl="summaryViewCtrl"></section>
+                   <section class="" dashboard></section>
+                   <section class="hidden" inventory-view></section>
+                   <section class="hidden" expense-view></section>
+                    <section class="hidden" estimation-view></section>
+                    <section class="hidden" summary></section>
                 <% end %>
                 </div>
                 <!-- /.row -->

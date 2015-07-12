@@ -5,9 +5,9 @@
     <div class="content">
         <!-- Nav tabs -->
         <ul class="nav nav-pills nav-justified inventory-category" role="tablist">
-            <li role="presentation" class="active"><a href="#on-stock" aria-controls="on-stock" role="tab" data-toggle="tab">On Stock</a></li>
-            <li role="presentation"><a href="#direct-purchase" aria-controls="direct-purchase" role="tab" data-toggle="tab">Direct Purchase</a></li>
-            <li role="presentation"><a href="#product-order" aria-controls="product-order" role="tab" data-toggle="tab">Product Order</a></li>
+            <li role="presentation" class="active"><a href="#on-stock" aria-controls="on-stock" role="tab" data-toggle="tab" ng-click="displayOnStockList()">Stocks</a></li>
+            <li role="presentation"><a href="#direct-purchase" aria-controls="direct-purchase" role="tab" data-toggle="tab" ng-click="displayDirectPurchaseList()">Direct Purchase</a></li>
+            <li role="presentation"><a href="#product-order" aria-controls="product-order" role="tab" data-toggle="tab" ng-click="getProductOrderList()">Product Order</a></li>
         </ul>
         <!-- Search -->
         <div class="row table-settings">

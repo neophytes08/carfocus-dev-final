@@ -1,7 +1,4 @@
 class Manufacturer < ActiveRecord::Base
   belongs_to :product_order
-
-  def self.primary_key
-    'manufacturer_' + super
-  end
+  validates :name, :address, :contact_no, presence: true;
 end

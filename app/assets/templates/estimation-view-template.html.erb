@@ -15,7 +15,9 @@
                                     <th>Service/s</th>
                                     <th>Price</th>
                                     <th>Date</th>
+                                    <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
                                     <th>Action</th>
+                                    <% end %>
                                 </tr>
                             </thead>
                             <tbody>
@@ -26,10 +28,12 @@
                                     <td>Painting, Tinsmith</td>
                                     <td>4500</td>
                                     <td>June 25, 2015</td>
+                                    <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
                                     <td>
                                         <a href="#"><label class="label label-primary"><i class="fa fa-edit"></i> Edit</label></a>
                                         <a href="#"><label class="label label-danger"><i class="fa fa-trash"></i> Remove</label></a>
                                     </td>
+                                    <% end %>
                                 </tr>
                             </tbody>
                         </table>

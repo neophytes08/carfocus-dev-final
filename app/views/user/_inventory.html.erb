@@ -3,14 +3,14 @@
      <ul class="nav nav-second-level">
      <% if current_user.user_type == 'admin'|| current_user.user_type == 'secretary' || current_user.user_type == 'regular' %>
         <li>
-            <a href="javascript:void(0)" navigation-app="inventory-view">View Items</a>
+            <a href="javascript:void(0)" ng-click="getInventoryView()">View Items</a>
         </li>
         <li>
-            <a href="javascript:void(0)" navigation-app="inventory-add">Add Items</a>
+            <a href="javascript:void(0)" ng-click="getInventoryAdd()">Add Items</a>
         </li>
     <% elsif  current_user.user_type == 'co-owner' %>
         <li>
-            <a href="javascript:void(0)" navigation-app="inventory-view">View Items</a>
+            <a href="javascript:void(0)" ng-click="getInventoryView()">View Items</a>
         </li>
     <% end %>
     </ul>

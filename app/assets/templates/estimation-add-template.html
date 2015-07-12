@@ -2,33 +2,26 @@
   <h1 class="page-header">Add Estimation</h1>
   <div class="row">
       <div class="col-md-12">
+      <form ng-submit="submitJobOrder()">
           <div class="content" id="job-order">
               <div class="panel panel-default">
                   <div class="panel-heading overflow">
                         <div class="col-md-4"><h4>Customer Details</h4></div>
                         <div class="col-md-4 col-md-offset-4">
                           <div class="form-group">
-                            <select class="existing_customer_lists_wrapper form-control">
-                              <option value="AL">Billy</option>
-                              <option value="AL">Matt</option>
-                              <option value="AL">Love</option>
-                              <option value="AL">Each</option>
-                              <option value="AL">Other</option>
-                            </select>
-                            <!-- <select 
+                            <select 
                                 class="existing_customer_lists_wrapper form-control"
                                 style="margin-top:15px;" 
-                                ng-model="customer.list" 
-                                ng-options="list.category for list in lists"
-                                ng-change="select(category.list)">
-                            </select> -->
+                                ng-model="customer.fullname" 
+                                ng-options="list.fullname for list in customerLists"
+                                ng-change="submitCustomerQuery(customer.fullname)">
+                            </select>
                           </div><!-- /input-group -->
                         </div>
                   </div>
-                  <div class="panel-body">
-                      <div class="form-info customer-details">
-                          <form>
-                              <div class="row">
+                    <div class="panel-body">
+                        <div class="form-info customer-details">
+                              <div class="row" ng-hide="noCustomerExist">
                                   <div class="col-md-6">
                                       <div class="form-group">
                                           <label>Full Name:</label>
@@ -42,7 +35,7 @@
                                       </div>
                                   </div>
                               </div>
-                              <div class="row">
+                              <div class="row" ng-hide="noCustomerExist">
                                   <div class="col-md-12">
                                       <div class="">
                                           <label>Address</label>
@@ -50,6 +43,41 @@
                                       </div>
                                   </div>
                               </div>
+
+                              <!-- Display if customer exists -->
+                              <div class="row" ng-show="customerExist">
+                                  <div class="col-md-6">
+                                      <div class="form-group" style="margin:0;">
+                                          <input type="hidden" ng-model="jobOrderInfo.id">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Full Name:</label>
+                                          <p ng-bind="userInfo.fullname" class="text-primary"></p>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <div class="form-group">
+                                          <label>Contact Number:</label>
+                                          <p ng-bind="userInfo.contact_no" class="text-primary"></p>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <div class="form-group text-right">
+                                          <label><a href="javascript:void(0)" ng-click="addCustomerInfoManually()">Cancel</a></label>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row" ng-show="customerExist">
+                                  <div class="col-md-12">
+                                      <div class="">
+                                          <label>Address</label>
+                                          <p ng-bind="userInfo.address" class="text-primary"></p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- end: Display if customer exists -->
+
+
                         </div>
                   </div>
               </div> 
@@ -115,15 +143,15 @@
                                           <div class="alert alert-{{service.class}} services-list overflow" >
                                             <div class="head-tab"><b><span ng-bind="service.service_name"></span></b> 
                                               <div class="btn-wrapper pull-right">
-                                                <button class="btn-xs btn btn-primary" ng-click="saveToModalAdd(service)" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-plus"></i></button>
-                                                <button class="btn-xs btn btn-danger" ng-click="removeSelectedService(service)" data-toggle="tooltip" data-placement="right" title="Remove Service"><i class="fa fa-times"></i></button>
+                                                <a class="btn-xs btn btn-primary" ng-click="saveToModalAdd(service)" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-plus"></i></a>
+                                                <a class="btn-xs btn btn-danger" ng-click="removeSelectedService(service)" data-toggle="tooltip" data-placement="right" title="Remove Service"><i class="fa fa-times"></i></a>
                                               </div>
                                             </div>
-                                            <div class="listServiceDetails" >
+                                            <div class="listServiceDetails" ng-model="totalPerBox">
                                               <ul class="list-unstyled list-of-service-desc" id="{{service.randomID}}">
                                                 <li ng-repeat="list in servicePushToBox" ng-if="service.randomID == list.randomID">
                                                   <span ng-bind="list.description"></span>
-                                                  <div class="pull-right">
+                                                  <div class="pull-right" ng-init="totalPerBox = totalPerBox + list.amount">
                                                     P <span ng-bind="list.amount"></span> 
                                                   </div>
                                                 </li>
@@ -158,68 +186,68 @@
                         </div>
                         <div class="form-group" style="display:inline-block;margin-right:25px;">
                           <label>
-                            <input type="radio" ng-model="content" name="payment-type" value="personal">
+                            <input type="radio" ng-model="content" ng-change="setPaymentType('personal')" name="payment-type" value="personal">
                             Personal
                           </label>
                         </div>
                         <div class="form-group" style="display:inline-block;margin-right:25px;">
                           <label>
-                            <input type="radio" ng-model="content" name="payment-type" value="insurance">
+                            <input type="radio" ng-model="content" ng-change="setPaymentType('insurance')" name="payment-type" value="insurance">
                             Insurance
                           </label>
                         </div>
-                        <div class="form-group" style="display:inline-block;margin-right:25px;">
+                        <!--div class="form-group" style="display:inline-block;margin-right:25px;">
                           <label>
                             <input type="radio" ng-model="content" name="payment-type" value="both">
                             Personal &amp; Insurance
                           </label>
-                        </div> 
+                        </div--> 
                         <hr>
                       </div>
 
                       <div class="col-md-6" ng-show="content == 'personal'">
                           <div class="form-group">
                             <label>Type</label><br>
-                            <label style="margin-right: 25px;"><input name="paymentType" type="radio" value="fullpayment"> Full Payment</label>
-                            <label style="margin-right: 25px;"><input name="paymentType" type="radio" value="downpayment"> Downpayment</label>
+                            <label style="margin-right: 25px;"><input name="paymentType" ng-model="jobOrderInfo.type" type="radio" value="fullpayment"> Full Payment</label>
+                            <label style="margin-right: 25px;"><input name="paymentType" ng-model="jobOrderInfo.type" type="radio" value="downpayment"> Downpayment</label>
                           </div>
                           <div class="form-group">
                             <label>Total Amount to be paid:</label>
-                            <input name="paymentType" type="number" ng-model="totalServiceAmountDetailPerBox" value="1540" placeholder="Total Amount" class="form-control">
+                            <input name="paymentType" type="number" ng-model="totalServiceAmountDetailPerBox" placeholder="Total Amount" class="form-control">
                           </div>
                           <div class="form-group">
                             <label>Customer Payment balance:</label>
-                            <input name="paymentType" type="number" placeholder="Amount Paid" class="form-control">
+                            <input name="paymentType" type="number" ng-model="jobOrderInfo.amount_paid" placeholder="Amount Paid" class="form-control">
                           </div>
                       </div>
 
                       <div class="col-md-6" ng-show="content == 'insurance'">
                           <div class="form-group">
-                            <input name="paymentType" type="number" placeholder="Insurance Company Name" class="form-control">
+                            <input name="paymentType" type="text" ng-model="jobOrderInfo.insurance_company" placeholder="Insurance Company Name" class="form-control">
                           </div>
                           <div class="form-group">
-                            <textarea name="paymentType" placeholder="Desciption" class="form-control" rows="5"></textarea>
+                            <textarea name="paymentType"  ng-model="jobOrderInfo.insurance_description" placeholder="Desciption" class="form-control" rows="5"></textarea>
                           </div>
                           <div class="form-group">
                               <label>Covered Parts:</label>
                               <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
+                                <input type="text" ng-model="jobOrderInfo.covered_parts" class="form-control" placeholder="Search for...">
                                 <span class="input-group-btn">
-                                  <button class="btn btn-info" type="button">Add</button>
+                                  <a class="btn btn-info" type="button">Add</a>
                                 </span>
                               </div>
                           </div>
                            <div class="form-group">
                             <label>Total Amount to be paid:</label>
-                            <input name="paymentType" type="number" value="1540" placeholder="Total Amount" class="form-control">
+                            <input name="paymentType" ng-model="jobOrderInfo.covered_parts_amount" type="number" value="0" placeholder="Total Amount" class="form-control">
                           </div>
                       </div>
 
                       <div class="col-md-6" ng-show="content == 'both'">
                           <div class="form-group">
                             <label>Type</label><br>
-                            <label style="margin-right: 25px;"><input type="radio" value="downpayment"> Downpayment</label>
-                            <label style="margin-right: 25px;"><input type="radio" value="fullpayment"> Full Payment</label>
+                            <label style="margin-right: 25px;"><input type="radio"  value="downpayment"> Downpayment</label>
+                            <label style="margin-right: 25px;"><input type="radio"  value="fullpayment"> Full Payment</label>
                           </div>
                           <div class="form-group">
                             <input name="paymentType" type="number" placeholder="Amount Paid" class="form-control">
@@ -229,18 +257,12 @@
                           </div>
                       </div>
 
-                      <div class="col-md-12" ng-show="content != ''">
-                        <hr>
-                        <div class="form-group tex-right">
-                          <button class="btn btn-primary">Save Job Order</button>
-                        </div>
-                      </div>
                   </div>
 
-                   </form>
+                    <input type="submit" class="btn btn-primary" value="Save Job Order">
               </div> 
-
-          </div>
+        </form>
+        </div>
       </div>
   </div>
 </div>
@@ -266,6 +288,7 @@
                     <input type="hidden" ng-model="serviceDataToModal.service_id">
                     <input required type="text" class="form-control" ng-model="serviceDetails.description" placeholder="Description" style="margin-bottom:5px;">
                     <input required type="number" class="form-control" ng-model="serviceDetails.amount" placeholder="Service Amount" style="margin-bottom:5px;">
+                    <hr>
                     <div class="form-group text-right">
                         <button class="btn btn-success">Add Service</button>
                     </div>

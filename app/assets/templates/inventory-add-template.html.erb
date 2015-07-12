@@ -37,7 +37,7 @@
                            <div class="form-categories">
                                <div class="row">
                                     <!-- form-on-stock -->
-                                    <div class="col-md-12 form-wrapper form-on-stock">
+                                    <!-- <div class="col-md-12 form-wrapper form-on-stock">
                                         <div class="col-md-12 remove-side-padding">
                                              <form class="row overflow" ng-submit="addToBasketStock()">
                                                 <div class="form-group" style="margin-bottom: 15px;overflow:hidden">
@@ -88,12 +88,13 @@
                                                 </div>                                  
                                             </form>
                                         </div>
-                                   </div>
+                                   </div> -->
                                    <!-- form-direct-purchase -->
-                                   <div class="col-md-12 form-wrapper form-direct-purchase" hidden>
+                                   <div class="col-md-12 form-wrapper form-direct-purchase">
                                        <div class="direct-purchase-fields">
                                            <form ng-submit="addToBasketDirPurch()">
                                                 <input type="hidden" ng-model="inventoryData.transaction_date" ng-init="inventoryData.transaction_date = '<%= Date.today.to_s %>'">
+                                                <input type="hidden" ng-model="inventoryData.category_id">
                                                <div class="form-group">
                                                    <label>O.R Number</label>
                                                    <input type="text" class="form-control" ng-model="inventoryData.or_no" required>
@@ -104,7 +105,7 @@
                                                        <input type="text" ng-model="inventoryData.in_charge"  class="form-control" required>
                                                     </div>
                                                     <div class="col-md-6">
-                                                       <input step="any" type="number" class="form-control" ng-model="inventoryData.cash_on_hand" placeholder="Cash on hand" style="margin-top:25px;"required>
+                                                       <input step="any" type="number" class="form-control" ng-model="inventoryData.cash_onhand" placeholder="Cash on hand" style="margin-top:25px;"required>
                                                     </div>
                                                </div>
                                                <div class="form-group">
@@ -141,6 +142,7 @@
                                    <div class="col-md-12 form-wrapper form-product-order" hidden>
                                         <div class="form-info manufacturer">
                                             <form class="overflow" ng-submit="addToBasketProdOrder()">
+                                            <input type="hidden" ng-model="inventoryData.category_id" ng-init="inventoryData.category_id = 2">
                                                 <div class="product-order-fields">
                                                     <div class="form-group">
                                                         <label>Manufacturer:</label>
