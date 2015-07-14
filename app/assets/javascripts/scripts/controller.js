@@ -7,13 +7,40 @@ app
     {
       console.log("dashBoardCtrl");
       $scope.manufacturerData = {};
+      $scope.stockList = {};
+      $scope.logList = {};
 
       $scope.submitManufacturer = function submitManufacturer(){
         CarServer.request("post", '/manufacturers/submitManufacturer',
         function(response){
-          console.log(response);
         }, $scope.manufacturerData);
       }
+
+      $scope.getLatestInventory = function getLatestInventory(){
+
+        CarServer.request("get", '/inventories/getLatestInventory',
+          function(response){
+            $scope.stockList = response;
+          })
+      }
+
+      $scope.getLogs = function getLogs(){
+
+        CarServer.request("get", '/logs/getLogs',
+          function(response){
+            console.log(response);
+            $scope.logList = response;
+          });
+      }
+      // load functions
+      $scope.getLatestInventory();
+      $scope.getLogs();
+
+      $scope.$on( "show-dashboard" , 
+        function onReceive(){
+          $scope.getLatestInventory();
+          $scope.getLogs();
+      }); 
     }
   ])
   .controller('inventoryViewCtrl', [
@@ -585,7 +612,6 @@ app
       /*----- SUBMIT JOB ORDER -----*/
       $scope.submitJobOrder = function submitJobOrder() {
         console.log( $scope.jobOrderInfo );
-        alert( 'test' )
       }
 
       /*----- Show selected status on alert box ( green ,red , yellow, blue) ------*/
@@ -606,6 +632,8 @@ app
       $scope.removeSelectedService = function removeSelectedService(service) {
         var getBoxTotalAmount = null;
         var totalTobeSubtracted = 0;
+
+
         /*----- Get the largest Total amount value -----*/
         getBoxTotalAmount = getSum( localStoredServices );
         // console.log( getSum( localStoredServices ))
@@ -634,6 +662,7 @@ app
         localStoredServices = setNewValue;
         $scope.jobOrderInfo.job_details = setNewValue;
         $scope.totalServiceAmountDetailPerBox =  getSum(localStoredServices);
+        $( 'option[label="default"]' ).attr( 'selected' );
       }
 
       /*----- Gets the largest Total amount value -----*/

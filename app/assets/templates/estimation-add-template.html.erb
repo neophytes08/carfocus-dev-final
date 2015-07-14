@@ -128,12 +128,12 @@
                                               <div class="form-group">
                                                   <label>Service</label>
                                                   <select 
-                                                    class="form-control"
+                                                    class="form-control select-service"
                                                     ng-model="jobOrderInfo.service_name" 
                                                     ng-options="list.service_name for list in serviceList"
                                                     ng-change="displayService(jobOrderInfo.service_name )"
                                                     >
-                                                    <option value="" class="text-center">--- Select Service ---</option>
+                                                    <option value="" label="default" class="text-center">--- Select Service ---</option>
                                                   </select>
                                               </div>
                                           </div>
@@ -173,6 +173,17 @@
                   </div>
               </div>  
 
+
+              <div class="panel panel-default">
+                  <div class="panel-heading">
+                      <h4>Inventory Part Needed</h4>
+                  </div>
+                  <div class="panel-body">
+                      <table class="table">
+                          wertyuia
+                      </table>
+                  </div>
+              </div>
 
 
               <div class="panel panel-default">
@@ -259,7 +270,7 @@
 
                   </div>
 
-                    <input type="submit" class="btn btn-primary" value="Save Job Order">
+                    <input type="submit" class="btn btn-primary" style="margin-bottom:20px;margin-left:15px;" value="Save Job Order">
               </div> 
         </form>
         </div>

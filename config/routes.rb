@@ -8,19 +8,21 @@ Rails.application.routes.draw do
 
   get 'services/index'
 
-  resources :user, :categories, :manufacturers
+  resources :categories, :manufacturers
+  resources :users, except: :show
   resources :inventories, except: :show
   resources :services, except: :show
   resources :job_orders, except: :show
   resources :customers, except: :show
+  resources :logs, except: :show
   devise_for :users
     
   devise_scope :user do
 
     authenticated :user do
-      root 'user#index', as: :authenticated_root
+      root 'users#index', as: :authenticated_root
       # get '*path' => 'application#index'
-      get '/user/settings' => 'user#settings', as: 'user_settings'
+      get '/users/settings' => 'users#settings', as: 'user_settings'
 
       post '/inventories/createInventory' => 'inventories#createInventory'
 
@@ -37,6 +39,8 @@ Rails.application.routes.draw do
       get '/inventories/getDirectPurchases' => 'inventories#getDirectPurchases'
       get '/services/getServices' => 'services#getServices'
       get '/customers/getCustomerInfo' => 'customers#getCustomerInfo'
+      get '/inventories/getLatestInventory' => 'inventories#getLatestInventory'
+      get 'logs/getLogs' => 'logs#getLogs'
       #update routes
       post '/inventories/:id/updateInventoryStocks' => 'inventories#updateInventoryStocks'
       post '/inventories/:id/updateProductOrder' => 'inventories#updateProductOrder'
@@ -47,6 +51,10 @@ Rails.application.routes.draw do
       get '/inventories/:id/deleteDirectPurchase' => 'inventories#deleteDirectPurchase'  
       get 'inventories/:id/deleteInventoryStock' => 'inventories#deleteInventoryStock'
       # end of on stock routes
+
+      # test
+      get '/users/getUserInfo' => 'users#getUserInfo'
+      # end of test
     end
 
     unauthenticated do

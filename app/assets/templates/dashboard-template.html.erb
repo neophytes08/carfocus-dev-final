@@ -51,25 +51,9 @@
                 </div>
                 <div class="panel-body">
                     <table class="table custom-table">
-                        <tr>
-                            <td>Bumper</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Hood</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>Windshield</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>Sidemirror</td>
-                            <td>7</td>
-                        </tr>
-                        <tr>
-                            <td>Wheels</td>
-                            <td>9</td>
+                        <tr ng-repeat="list in stockList">
+                            <td ng-bind="list.product_name"></td>
+                            <td ng-bind="list.quantity"></td>
                         </tr>
                     </table>
                 </div>
@@ -115,25 +99,9 @@
                 </div>
                 <div class="panel-body">
                     <table class="table custom-table">
-                        <tr>
-                            <td>Joecel edited an estimation</td>
-                            <td>1:04pm</td>
-                        </tr>
-                        <tr>
-                             <td>Joecel created an estimation</td>
-                            <td>1:04pm</td>
-                        </tr>
-                        <tr>
-                             <td>Joecel created an estimation</td>
-                            <td>1:04pm</td>
-                        </tr>
-                        <tr>
-                             <td>Joecel edited an estimation</td>
-                            <td>1:04pm</td>
-                        </tr>
-                        <tr>
-                             <td>Joecel edited an estimation</td>
-                            <td>1:04pm</td>
+                        <tr ng-repeat="list in logList" style="font-size: 11.2px;">
+                            <td ng-bind="list.action"></td>
+                            <td ng-bind="list.created_at | date"></td>
                         </tr>
                     </table>
                 </div>
