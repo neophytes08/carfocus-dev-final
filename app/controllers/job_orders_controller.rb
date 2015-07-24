@@ -1,31 +1,28 @@
 class JobOrdersController < ApplicationController
   
+  def showJobOrder
+    job = ActiveRecord::Base.connection.select_all("select a.id as estimation_id, a.customer_id, a.car_model, a.plate_no, a.car_brand, a.approved, a.job_status, a.created_at, b.fullname from estimations a inner join customer_infos b on b.id = a.customer_id and a.approved = 'true'")
 
-  def submitJobOrder
-    # customer = CustomerInfo.where(fullname: params[:fullname])any?
+    render json: job, :status => "succes"    
+  end
 
-    if params[:customer_exist] == true
-      job = Estimation.create(user_id: current_user.id, customer_id: customer_id.id, payment_type: params[:payment_type], car_model: params[:car_model], plate_no: params[:plate_no], color: params[:color], insurance_id: params[:insurance_id], service_id: params[:service_id], approved: false)
-      job.save
+  def jobDone
+    job = Estimation.find_by(id: params[:id])
 
-      service_detail = ServiceDetail.create([{service_id: params[:service_id], service_details: params[:service_details], price: params[:price], customer_id: params[:customer_id], estimation_id: job.id}])
-
-    elsif params[:customer_exist] == false
-      customer_info = CustomerInfo.create(fulllname: params[:fullname].downcase, address: params[:address], contact_no: params[:contact_no])
-      customer.save
-
-      job = Estimation.create(user_id: current_user.id, customer_id: customer.id, payment_type: params[:payment_type], car_model: params[:car_model], plate_no: params[:plate_no], color: params[:color], insurance_id: params[:insurance_id], service_id: params[:service_id], approved: false)
-      job.save
-
-      service_detail = ServiceDetail.create([{service_id: params[:service_id], service_details: params[:service_details], price: params[:price], customer_id: customer.id, estimation_id: job.id}])
-    end
-    
-    if service_detail
-      logs = Log.create(action: current_user.user_type.titleize + "added a job order with customer");
-      logs.save
+    if job.update_attributes(:job_status => true)
       render :json => { :status => :ok, :message => "Success" }
     else
-      render :json => { :status => :err, :message => "Error" }
+      render :json => { :status => :error, :message => "Error" }
+    end
+  end
+
+  def jobUnDone
+    job = Estimation.find_by(id: params[:id])
+
+    if job.update_attributes(:job_status => false)
+      render :json => { :status => :ok, :message => "Success" }
+    else
+      render :json => { :status => :error, :message => "Error" }
     end
   end
 end

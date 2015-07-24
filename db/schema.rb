@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150712043806) do
-=======
-ActiveRecord::Schema.define(version: 20150709083621) do
->>>>>>> 3b9047a5696b6a057092eff510b83016ba2059b1
+ActiveRecord::Schema.define(version: 20150723084208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,21 +55,19 @@ ActiveRecord::Schema.define(version: 20150709083621) do
   create_table "estimations", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "customer_id"
-    t.string   "payment_type"
     t.string   "car_model"
     t.string   "plate_no"
     t.string   "color"
-    t.integer  "insurance_id"
-    t.integer  "service_id"
     t.boolean  "approved"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "car_brand"
+    t.string   "engine_type"
+    t.string   "chasis_no"
+    t.boolean  "job_status"
   end
 
   add_index "estimations", ["customer_id"], name: "index_estimations_on_customer_id", using: :btree
-  add_index "estimations", ["insurance_id"], name: "index_estimations_on_insurance_id", using: :btree
-  add_index "estimations", ["service_id"], name: "index_estimations_on_service_id", using: :btree
   add_index "estimations", ["user_id"], name: "index_estimations_on_user_id", using: :btree
 
   create_table "expenses", force: :cascade do |t|
@@ -128,6 +122,20 @@ ActiveRecord::Schema.define(version: 20150709083621) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "part_needs", force: :cascade do |t|
+    t.integer  "estimation_id"
+    t.integer  "stock_id"
+    t.string   "product_details"
+    t.string   "product_name"
+    t.integer  "quantity"
+    t.float    "price"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "part_needs", ["estimation_id"], name: "index_part_needs_on_estimation_id", using: :btree
+  add_index "part_needs", ["stock_id"], name: "index_part_needs_on_stock_id", using: :btree
+
   create_table "product_orders", force: :cascade do |t|
     t.integer  "stock_id"
     t.integer  "manufacturer_id"
@@ -140,16 +148,14 @@ ActiveRecord::Schema.define(version: 20150709083621) do
   add_index "product_orders", ["stock_id"], name: "index_product_orders_on_stock_id", using: :btree
 
   create_table "service_details", force: :cascade do |t|
-    t.string   "service_id"
-    t.string   "service_details"
-    t.integer  "price"
-    t.integer  "customer_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "service_id"
+    t.string   "service_description"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.float    "service_amount"
     t.integer  "estimation_id"
   end
 
-  add_index "service_details", ["customer_id"], name: "index_service_details_on_customer_id", using: :btree
   add_index "service_details", ["estimation_id"], name: "index_service_details_on_estimation_id", using: :btree
   add_index "service_details", ["service_id"], name: "index_service_details_on_service_id", using: :btree
 

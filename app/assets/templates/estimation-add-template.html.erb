@@ -1,7 +1,7 @@
-<div class="main-wrapper col-lg-12">
+<div class="main-wrapper col-lg-12" >
   <h1 class="page-header">Add Estimation</h1>
   <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12" id="job-order-form-wrapper">
       <form ng-submit="submitJobOrder()">
           <div class="content" id="job-order">
               <div class="panel panel-default">
@@ -98,16 +98,36 @@
                                   </div>
                                   <div class="col-md-6">
                                       <div class="form-group">
-                                          <label>Plate Number:</label>
-                                          <input type="text" class="form-control" ng-model="jobOrderInfo.plate_no" placeholder="Plate Number">
+                                          <label>Car Brand:</label>
+                                          <input type="text" class="form-control" ng-model="jobOrderInfo.car_brand" placeholder="Car Brand">
                                       </div>
                                   </div>
                               </div>
                               <div class="row">
                                   <div class="col-md-6">
                                       <div class="form-group">
+                                          <label>Plate Number:</label>
+                                          <input type="text" class="form-control" ng-model="jobOrderInfo.plate_no" placeholder="Plate Number">
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
                                           <label>Color:</label>
                                           <input type="text" class="form-control" ng-model="jobOrderInfo.color" placeholder="Color Description">       
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label>Chasis Number:</label>
+                                          <input type="text" class="form-control" ng-model="jobOrderInfo.chasis_no" placeholder="Chasis Number">       
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label>Engine Type:</label>
+                                          <input type="text" class="form-control" ng-model="jobOrderInfo.engine_type" placeholder="Engine Type">       
                                       </div>
                                   </div>
                               </div>
@@ -128,12 +148,12 @@
                                               <div class="form-group">
                                                   <label>Service</label>
                                                   <select 
-                                                    class="form-control select-service"
+                                                    class="form-control"
                                                     ng-model="jobOrderInfo.service_name" 
                                                     ng-options="list.service_name for list in serviceList"
-                                                    ng-change="displayService(jobOrderInfo.service_name )"
-                                                    >
-                                                    <option value="" label="default" class="text-center">--- Select Service ---</option>
+                                                    ng-change="displayService(jobOrderInfo.service_name)"
+                                                    ng-model="jobOrderInfo.service_id">
+                                                    <option value="" class="text-center">--- Select Service ---</option>
                                                   </select>
                                               </div>
                                           </div>
@@ -171,21 +191,74 @@
                               </div>
                       </div>
                   </div>
-              </div>  
+              </div> 
 
-
+              <!-- Parts Needed Panel -->
               <div class="panel panel-default">
                   <div class="panel-heading">
-                      <h4>Inventory Part Needed</h4>
+                      <h4>Parts Needed</h4>
                   </div>
                   <div class="panel-body">
-                      <table class="table">
-                          wertyuia
-                      </table>
+                      <div class="row">
+                          <div class="col-md-4">
+                              <select 
+                                  multiple="multiple"
+                                  class="inventory-parts-list form-control"
+                                  ng-model="jobOrderInfo.part_needed" 
+                                  ng-options="list.product_name for list in inventoryStocksLists"
+                                  ng-change="displaySelectedParts(jobOrderInfo.part_needed)">
+                              </select>
+                          </div>
+                      </div>
+                      
+                      <div class="cols-md-12 selected_wrapper">
+                          <table class="table">
+                              <thead>
+                                  <th>Selected Parts</th>
+                                  <th style="width: 205px;">Total Quantity in Inventory</th>
+                                  <th>SRP</th>
+                                  <th>Quantity</th>
+                                  <th>Total (PHP)</th>
+                              </thead>
+                              <tbody>
+                                  <tr ng-repeat="part in partsLists">
+                                      <td ng-bind="part.product_name"></td>
+                                      <td><span ng-bind="part.quantity"></span></td>
+                                      <th>Php <span ng-bind="part.price"></span></th>
+                                      <td>
+                                        <input 
+                                          placeholder="Enter quantity" 
+                                          type="number" 
+                                          ng-model="parts_quantity" 
+                                          ng-change="calculateTotalAmount(part.price,parts_quantity,$index,part.id,part)" 
+                                          class="form-control" 
+                                          min="1" 
+                                          max="{{part.quantity}}">
+                                      </td>
+                                      <td>
+                                        <span class="text-primary">
+                                        </span>
+                                        <div ng-if="part.quantity >= parts_quantity">
+                                          Php <span class="text-primary" ng-bind="singlePartAmount[part.id]"></span>
+                                        </div>
+                                        <div ng-show="quantityVal[part.id]" class="text-danger">
+                                          <p>Invalid quantity. </p>
+                                          <p>Exceeds the maximum</p>
+                                        </div>
+
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                      
                   </div>
+
+                  <input type="submit" class="btn btn-primary" style="margin-bottom:20px;margin-left:15px" value="Proceed">
               </div>
 
 
+<!-- 
               <div class="panel panel-default">
                   <div class="panel-heading">
                       <h4>Payment Type</h4>
@@ -206,14 +279,15 @@
                             <input type="radio" ng-model="content" ng-change="setPaymentType('insurance')" name="payment-type" value="insurance">
                             Insurance
                           </label>
-                        </div>
+                        </div> -->
                         <!--div class="form-group" style="display:inline-block;margin-right:25px;">
                           <label>
                             <input type="radio" ng-model="content" name="payment-type" value="both">
                             Personal &amp; Insurance
                           </label>
                         </div--> 
-                        <hr>
+                       <!--  <hr>
+
                       </div>
 
                       <div class="col-md-6" ng-show="content == 'personal'">
@@ -270,8 +344,8 @@
 
                   </div>
 
-                    <input type="submit" class="btn btn-primary" style="margin-bottom:20px;margin-left:15px;" value="Save Job Order">
-              </div> 
+                    <input type="submit" class="btn btn-primary" style="margin-bottom:20px;margin-left:15px" value="Save Job Order">
+              </div>  -->
         </form>
         </div>
       </div>
@@ -311,4 +385,136 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- Preview Estimation and print -->
+<div class="main-wrapper col-lg-12" id="preview-estimation-wrapper" hidden>
+    <h1 class="page-header">Estimation Preview 
+    <div class="pull-right">
+      <button class="btn btn-danger" ng-click="backToForm()"><i class="fa fa-arrow-left"></i>&nbsp; Back</button>
+      <button class="btn btn-default" ><i class="fa fa-download"></i>&nbsp; Print and Save Estimation</button>
+      <button class="btn btn-success" ><i class="fa fa-floppy-o"></i>&nbsp; Save Estimation</button>
+    </div>
+    </h1>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="preview-wrapper">
+                <!-- Heading Preview -->
+                <div class="estimation-heading-preview">
+                    <div class="preview-default-heading">
+                        <div class="image-heading"></div>
+                        <div class="branding-name">
+                            <div>Car Focus <small>Auto Shop</small></div>
+                        </div>
+                        <div class="contact-info">
+                            <p>Abellanosa Street, Consolaction, CDOC</p>
+                            <p>Telephone No. : (088)324-0607</p>
+                            <p>Mobile No. : 0935-2658-548 / 0923-6488-371</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="estimation-label">For the account of : </label>&nbsp;
+                            <div style="display:inline-block" class="estimation-info" ng-bind="jobOrderInfo.fullname"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="estimation-label">Date : </label>&nbsp;
+                            <div style="display:inline-block" class="estimation-info" ng-bind="jobOrderInfo.transaction_date"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="estimation-label">Unit/Description : </label>&nbsp;
+                            <div style="display:inline-block" class="estimation-info" ng-bind="jobOrderInfo.car_model"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="estimation-label">Plate No. : </label>&nbsp;
+                            <div style="display:inline-block" class="estimation-info" ng-bind="jobOrderInfo.plate_no">ZTB-184</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="estimation-label">Chasis No. : </label>&nbsp;
+                            <div style="display:inline-block" class="estimation-info" ng-bind="jobOrderInfo.chasis_no"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="estimation-label">Engine Type : </label>&nbsp;
+                            <div style="display:inline-block" class="estimation-info" ng-bind="jobOrderInfo.engine_type"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--  Body Preview -->
+                <div class="estimation-body-preview">
+                    <table class="table">
+                          <thead>
+                              <th>Services</th>
+                              <th>Details</th>
+                              <th>Total</th>
+                          </thead>
+                          <tbody>
+                              <tr ng-repeat="service in jobOrderInfo.service_name">
+                                  <td ng-bind="service.service_name"></td>
+                                  <td>
+                                      <ul class="list-unstyled">
+                                          <li ng-repeat="service_detail in jobOrderInfo.job_details" 
+                                              ng-if="service_detail.service_id == service.service_id"
+                                              ng-bind="service_detail.service_description"
+                                          ></li>
+                                      </ul>
+                                  </td>
+                                  <td>
+                                      Php <span class="text-info" ng-bind="service.boxTots"></span>
+                                  </td>
+                              </tr>  
+                              
+                              <!-- Total Service Charge -->
+                              <tr style="height: 90px;">
+                                  <td colspan="2"><b>Total Service Charge</b></td>
+                                  <td><b class="text-primary">Php <span ng-bind="totalServiceAmountDetailPerBox"></span></b></td>
+                              </tr>
+                              <tr>
+                                  <th>Parts</th>
+                                  <th>Quantity</th>
+                                  <th>Amount</th>
+                              </tr> 
+                              <tr ng-repeat="part in partsLists">
+                                  <td ng-bind="part.product_name"></td>
+                                  <td>
+                                      <span class="text-info" ng-bind="part.selectedAmountQuantity"></span>
+                                  </td>
+                                  <td>
+                                      <span class="text-info"></span>
+                                  </td>
+                              </tr> 
+                              <!-- Parts Needed -->
+                              <tr>
+                                  <td colspan="2"><b>Total Parts Needed Amount</b></td>
+                                  <td><b class="text-primary">Php <span ng-bind="totalPartAmount"></span></b></td>
+                              </tr>
+                          </tbody>
+                    </table>
+
+                    <div class="total-estimation-amount row" style="margin-bottom:20px">
+                        <div class="col-md-6">
+                            <p><label>Total Estimation Amount:</label></p>
+                        </div>
+                        <div class="col-md-6 text-right" style="padding-right:15%;">
+                            <p><strong>Php <span class="text-primary" ng-bind="totalEstimationAmount"></span></strong></p>
+                        </div>
+                    </div>  
+                    <div class="horizontal-dotted-separator"></div>
+                    <div class="conditions" style="margin-top:40px;">
+                        <h4>Conditions</h4>
+                        <ol class="list-unstyled" style="list-style-type:decimal;padding-left:35px;">
+                            <li>Prices Qouted are subject to without prior notice.</li>
+                            <li>Price good for 15 days only</li>
+                            <li>Any additional damage or parts discovered in the course of repair are subject to additional charges</li>
+                            <li>The owner allows test drive of his vehicle by authorized  drivers for testing and inspection purposes</li>
+                            <li>Not valid as court evidence</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -7,12 +7,6 @@ app
         "restrict": "A",
         "scope": true,
         "link": function onLink(scope, element, attributeSet){
-          // element.bind("click",
-          //   function(){
-          //     $rootScope.$broadcast("hide");
-          //     $rootScope.$broadcast("show-" + attributeSet.navigationApp);
-          //   });
-          console.log('hello');
           scope.getDashBoard = function getDashBoard(){
             $rootScope.$broadcast('hide');
             $rootScope.$broadcast('show-dashboard');
@@ -49,6 +43,10 @@ app
             $rootScope.$broadcast('hide');
             $rootScope.$broadcast('show-summary');
           }
+          scope.getJobOrderView = function getJobOrderView(){
+            $rootScope.$broadcast('hide');
+            $rootScope.$broadcast('show-joborder');
+          }
         }
       }
     }
@@ -60,19 +58,19 @@ app
           "scope": true,
           "controller": "dashBoardCtrl",
           "templateUrl": "dashboard-template.html",
-          "link": function onlink(scope, element, attributeSet){
+          "link": function onLink(scope, element, attributeSet){
             // element.addClass("hidden");
             console.log('oki')
             scope.$on('show-dashboard' , 
               function on(){
                 element.removeClass("hidden");
-                // $('.settings').addClass('active-menu');
+          
               });
 
             scope.$on('hide', 
               function on(){
                 element.addClass("hidden");
-                // $('.settings').removeClass('active-menu');
+                
               }); 
           }
         }
@@ -85,18 +83,18 @@ app
           "scope": true,
           "controller": "inventoryViewCtrl",
           "templateUrl": "inventory-view-template.html",
-          "link": function onlink(scope, element, attributeSet){
+          "link": function onLink(scope, element, attributeSet){
             element.addClass("hidden");
             scope.$on('show-inventory-view' , 
               function on(){
                 element.removeClass("hidden");
-                // $('.settings').addClass('active-menu');
+          
               });
 
             scope.$on('hide', 
               function on(){
                 element.addClass("hidden");
-                // $('.settings').removeClass('active-menu');
+                
               }); 
           }
         }
@@ -109,18 +107,18 @@ app
           "scope": true,
           "controller": "inventoryAddCtrl",
           "templateUrl": "inventory-add-template.html",
-          "link": function onlink(scope, element, attributeSet){
+          "link": function onLink(scope, element, attributeSet){
             element.addClass("hidden");
             scope.$on('show-inventory-add' , 
               function on(){
                 element.removeClass("hidden");
-                // $('.settings').addClass('active-menu');
+          
               });
 
             scope.$on('hide', 
               function on(){
                 element.addClass("hidden");
-                // $('.settings').removeClass('active-menu');
+                
               }); 
           }
         }
@@ -133,18 +131,18 @@ app
           "scope": true,
           "controller": "expenseViewCtrl",
           "templateUrl": "expense-view-template.html",
-          "link": function onlink(scope, element, attributeSet){
+          "link": function onLink(scope, element, attributeSet){
             element.addClass("hidden");
             scope.$on('show-expense-view' , 
               function on(){
                 element.removeClass("hidden");
-                // $('.settings').addClass('active-menu');
+          
               });
 
             scope.$on('hide', 
               function on(){
                 element.addClass("hidden");
-                // $('.settings').removeClass('active-menu');
+                
               }); 
           }
         }
@@ -157,18 +155,18 @@ app
           "scope": true,
           "controller": "expenseAddCtrl",
           "templateUrl": "expense-add-template.html",
-          "link": function onlink(scope, element, attributeSet){
+          "link": function onLink(scope, element, attributeSet){
             element.addClass("hidden");
             scope.$on('show-expense-add' , 
               function on(){
                 element.removeClass("hidden");
-                // $('.settings').addClass('active-menu');
+          
               });
 
             scope.$on('hide', 
               function on(){
                 element.addClass("hidden");
-                // $('.settings').removeClass('active-menu');
+                
               }); 
           }
         }
@@ -181,20 +179,20 @@ app
           "scope": true,
           "controller": "estimationAddCtrl",
           "templateUrl": "estimation-add-template.html",
-          "link": function onlink(scope, element, attributeSet){
+          "link": function onLink(scope, element, attributeSet){
           <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
             element.addClass("hidden");
           <% end %>
             scope.$on('show-estimation-add' , 
               function on(){
                 element.removeClass("hidden");
-                // $('.settings').addClass('active-menu');
+          
               });
 
             scope.$on('hide', 
               function on(){
                 element.addClass("hidden");
-                // $('.settings').removeClass('active-menu');
+                
               }); 
           }
         }
@@ -207,18 +205,18 @@ app
           "scope": true,
           "controller": "estimationViewCtrl",
           "templateUrl": "estimation-view-template.html",
-          "link": function onlink(scope, element, attributeSet){
+          "link": function onLink(scope, element, attributeSet){
             element.addClass("hidden");
             scope.$on('show-estimation-view' , 
               function on(){
                 element.removeClass("hidden");
-                // $('.settings').addClass('active-menu');
+          
               });
 
             scope.$on('hide', 
               function on(){
                 element.addClass("hidden");
-                // $('.settings').removeClass('active-menu');
+                
               }); 
           }
         }
@@ -231,18 +229,18 @@ app
           "scope": true,
           "controller": "customerCtrl",
           "templateUrl": "customer-template.html",
-          "link": function onlink(scope, element, attributeSet){
+          "link": function onLink(scope, element, attributeSet){
             element.addClass("hidden");
             scope.$on('show-customer' , 
               function on(){
                 element.removeClass("hidden");
-                // $('.settings').addClass('active-menu');
+          
               });
 
             scope.$on('hide', 
               function on(){
                 element.addClass("hidden");
-                // $('.settings').removeClass('active-menu');
+                
               }); 
           }
         }
@@ -255,69 +253,44 @@ app
           "scope": true,
           "controller": "summaryViewCtrl",
           "templateUrl": "summary-view-template.html",
-          "link": function onlink(scope, element, attributeSet){
+          "link": function onLink(scope, element, attributeSet){
             element.addClass("hidden");
             scope.$on('show-summary' , 
               function on(){
                 element.removeClass("hidden");
-                // $('.settings').addClass('active-menu');
+          
               });
 
             scope.$on('hide', 
               function on(){
                 element.addClass("hidden");
-                // $('.settings').removeClass('active-menu');
+                
               }); 
           }
         }
       }
+  ])
+  .directive("jobOrder", [
+    function directive(){
+      return {
+        "restrict": "A",
+        "scope": true,
+        "controller": "jobOrderCtrl",
+        "templateUrl": "job-order-view.html",
+        "link": function onLink(scope, element, attributeSet){
+           element.addClass("hidden");
+            scope.$on('show-joborder' , 
+              function on(){
+                element.removeClass("hidden");
+            
+              });
+
+            scope.$on('hide', 
+              function on(){
+                element.addClass("hidden");
+                
+              }); 
+        }
+      }
+    }
   ]);
-  // .directive("template", [
-  //   "$rootScope",
-  //   function directive($rootScope)
-  //   {
-  //     return {
-  //       "restrict": "A",
-  //       "scope": true,
-  //       "link": function onLink(scope, element, attributeSet){
-
-  //         scope.$on("show-" + attributeSet.template,
-  //           function(){
-  //             element.removeClass("hidden");
-  //           });
-
-  //         scope.$on("hide",
-  //           function(){
-  //             element.addClass("hidden");
-  //           });
-  //       }
-  //     }
-  //   }
-  // ])
-  // .directive("templateName", [
-  //   "$rootScope",
-  //   function directive($rootScope)
-  //   {
-  //     return {
-  //       "restrict": "A",
-  //       "scope": true,
-  //       "templateUrl": function onLoad(element, attributeSet){
-  //         // alert(attributeSet.templateName);
-  //         return attributeSet.templateName;
-
-  //       }
-  //     }
-  //   }
-  // ])
-  // .directive("templateCtrl", [
-  //   "$rootScope",
-  //   function directive($rootScope)
-  //   {
-  //     return {
-  //       "restrict": "A",
-  //       "scope": true,
-  //       "controller": "@",
-  //       "name": "templateCtrl"
-  //     }
-  //   }
-  // ]);

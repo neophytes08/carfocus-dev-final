@@ -1,0 +1,86 @@
+<div class="main-wrapper col-lg-12">
+    <h1 class="page-header">Job Order</h1>
+    <div class="row">
+    <div class="col-md-12">
+        <div class="content estimation">
+            <div class="col-md-12 form-direct-purchase">
+               <div class="direct-purchase-fields">
+                   <div class="item-list">
+                        <table class="table table-hover table-condense table-bordered" id="dataTables-estimations">
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>Car Brand</th>
+                                    <th>Plate #</th>
+                                    <th>Service/s</th>
+                                    <th>Date Transaction</th>
+                                    <th>Job Status</th>
+                                    <th>Pyament Status</th>
+                                    <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
+                                    <th>Action</th>
+                                    <% end %>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="list in jobOrderList">
+                                    <td ng-bind="list.fullname"></td>
+                                    <td ng-bind="list.car_brand"></td>
+                                    <td ng-bind="list.plate_no"></td>
+                                    <td><a href ng-click="showServices(list.estimation_id)"> See Details </a></td>
+                                    <td>{{list.created_at| cmdate:'yyyy-MM-dd'}}</td>
+                                    <td>Not Paid</td>
+                                    <td>
+                                        <a href ng-if="list.job_status == 'f'" ng-click="jobDone(list.estimation_id)"><label class="label label-info"><i class="glyphicon glyphicon-hand-right"></i> On going</label></a>
+                                        <a href ng-if="list.job_status == 't'" ng-click="jobUnDone(list.estimation_id)"><label class="label label-success"><i class="glyphicon glyphicon-thumbs-up"></i> Done</label></a>
+                                    </td>
+                                    <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
+                                    <td>
+                                        <a href><label class="label label-primary"><i class="fa fa-edit"></i> Edit</label></a>
+                                        <a href><label class="label label-danger"><i class="fa fa-trash"></i> Remove</label></a>
+                                    </td>
+                                    <% end %>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--  modal -->
+<div class="modal fade" id="showCustomerServices" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Service Details</th>
+                    <th>Service Cost</th>
+                </tr>    
+            </thead>
+            <tbody>
+                <tr ng-repeat="list in showServiceDetailsList">
+                    <td ng-bind="list.service_name"></td>
+                    <td ng-bind="list.service_description"></td>
+                    <td ng-bind="list.service_amount"></td>
+                </tr>    
+            </tbody>            
+            
+        </table>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>

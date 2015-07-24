@@ -4,12 +4,8 @@ class InventoriesController < ApplicationController
      
   end
 
-  def getServices
-    
-  end
-
   def show
-
+    
   end
 
 
@@ -167,4 +163,9 @@ class InventoriesController < ApplicationController
       render json: inventory.to_json(:only => ["product_name","quantity"]) , :status => "success"
   end
 
+  def getAvailableStockList
+    available = Stock.all.where("quantity > 0").order("created_at asc");
+
+    render json: available, :status => "success"
+  end
 end

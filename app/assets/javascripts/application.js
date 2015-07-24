@@ -20,14 +20,17 @@
 //= require scripts/angular
 //= require angular-datatables.min
 //= require angular-rails-templates
+//= require angular-animate.min
 //= require scripts/app
 //= require scripts/factory
 //= require scripts/directive
 //= require scripts/controller
-//= require materialize.min
 //= require morris.min
 //= require raphael-min
 //= require select2.min
 //= require_tree ../templates
 
 
+$(document).ready(function(){
+   $('[data-toggle="tooltip"]').tooltip()
+ });

@@ -37,9 +37,9 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="/user/settings"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="/user_infos/settings"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
-                        <li><a href data-toggle="modal" data-target="#settings"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href=""><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="/users/sign_out"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -58,7 +58,12 @@
                            <div class="user-info">  
                                <div class="profile-pic text-center">
                                    <!-- <img src="img/user.jpg" class="img-circle float"> -->
-                                   <%= image_tag "user.jpg", class: "img-circle float" %>
+                                   <% if current_user.user_info.image? %>
+                                      <img src="<%= current_user.user_info.image.url %>" class="img-circle float">
+                                   <% else %>
+                                    <%= image_tag "user.jpg", class: "img-circle float" %>
+                                   <% end %>
+                                   
                                </div>
                                <div class="profile-name text-center">
                                    <h4>Hello, <span class="text-primary"><%= current_user.user_info.firstname.titleize %></span></h4>
@@ -109,13 +114,13 @@
                    <section class="hidden" expense-add></section>
                    <section class="hidden" estimation-add></section>
                    <section class="hidden" estimation-view></section>
+                   <section class="hidden" job-order></section>
                    <section class="hidden" customer></section>
                    <section class="hidden" summary></section>
-
                 <% elsif current_user.user_type == 'regular' %>
-                  <section estimation-add></section>
+                   <section estimation-add></section>
                    <section class="hidden" estimation-view></section>
-
+                   <section class="hidden" job-order></section>
                 <% elsif current_user.user_type == 'secretary' %>
                   <section class="" dashboard></section>
                    <section class="hidden" inventory-view></section>
@@ -124,15 +129,15 @@
                    <section class="hidden" expense-add></section>
                    <section class="hidden" estimation-add></section>
                    <section class="hidden" estimation-view></section>
+                   <section class="hidden" job-order></section>
                    <section class="hidden" customer></section>
                    <section class="hidden" summary></section>
-
                 <% elsif current_user.user_type == 'co-owner' %>
                    <section class="" dashboard></section>
                    <section class="hidden" inventory-view></section>
                    <section class="hidden" expense-view></section>
-                    <section class="hidden" estimation-view></section>
-                    <section class="hidden" summary></section>
+                   <section class="hidden" estimation-view></section>
+                   <section class="hidden" summary></section>
                 <% end %>
                 </div>
                 <!-- /.row -->

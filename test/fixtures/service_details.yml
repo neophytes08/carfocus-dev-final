@@ -1,13 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  service_id: MyString
-  service_details: MyString
-  price: 1
-  customer_id: 1
+  service_get_id: 1
+  service_id: 1
+  service_description: MyString
 
 two:
-  service_id: MyString
-  service_details: MyString
-  price: 1
-  customer_id: 1
+  service_get_id: 1
+  service_id: 1
+  service_description: MyString

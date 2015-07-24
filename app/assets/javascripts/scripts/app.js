@@ -1,4 +1,4 @@
-var app = angular.module('app', ['templates' , 'datatables'])
+var app = angular.module('app', ['templates' , 'datatables', 'ngAnimate'])
 app
 .filter('cmdate', [
   '$filter', function($filter) {
