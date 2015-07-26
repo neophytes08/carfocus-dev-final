@@ -12,7 +12,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <% end %>
 
-<div id="wrapper">
+<div id="wrapper" navigation-app>
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -39,7 +39,7 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="/user_infos/settings"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
-                        <li><a href=""><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href ng-click="getSettings()"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="/users/sign_out"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -51,7 +51,7 @@
             </ul>
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation" navigation-app>
+            <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
@@ -107,16 +107,17 @@
             <div class="container-fluid">
                 <div class="row">
                 <% if current_user.user_type == 'admin' %>
-                   <section class="" dashboard></section>
+                   <section class="hidden" dashboard></section>
                    <section class="hidden" inventory-view></section>
                    <section class="hidden" inventory-add></section>
                    <section class="hidden" expense-view></section>
                    <section class="hidden" expense-add></section>
-                   <section class="hidden" estimation-add></section>
+                   <section class="" estimation-add></section>
                    <section class="hidden" estimation-view></section>
                    <section class="hidden" job-order></section>
                    <section class="hidden" customer></section>
                    <section class="hidden" summary></section>
+                   <section class="hidden" settings></section>
                 <% elsif current_user.user_type == 'regular' %>
                    <section estimation-add></section>
                    <section class="hidden" estimation-view></section>

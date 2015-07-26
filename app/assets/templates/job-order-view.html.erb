@@ -14,9 +14,9 @@
                                     <th>Plate #</th>
                                     <th>Service/s</th>
                                     <th>Date Transaction</th>
-                                    <th>Job Status</th>
                                     <th>Pyament Status</th>
-                                    <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
+                                    <th>Job Status</th>
+                                    <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary'%>
                                     <th>Action</th>
                                     <% end %>
                                 </tr>
@@ -33,10 +33,10 @@
                                         <a href ng-if="list.job_status == 'f'" ng-click="jobDone(list.estimation_id)"><label class="label label-info"><i class="glyphicon glyphicon-hand-right"></i> On going</label></a>
                                         <a href ng-if="list.job_status == 't'" ng-click="jobUnDone(list.estimation_id)"><label class="label label-success"><i class="glyphicon glyphicon-thumbs-up"></i> Done</label></a>
                                     </td>
-                                    <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
+                                    <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary'%>
                                     <td>
                                         <a href><label class="label label-primary"><i class="fa fa-edit"></i> Edit</label></a>
-                                        <a href><label class="label label-danger"><i class="fa fa-trash"></i> Remove</label></a>
+                                        <a href ng-click="deleteEstimation(list)"><label class="label label-danger"><i class="fa fa-trash"></i> Remove</label></a>
                                     </td>
                                     <% end %>
                                 </tr>

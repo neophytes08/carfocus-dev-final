@@ -1,0 +1,280 @@
+ <div class="main-wrapper col-lg-12">
+    <h1 class="page-header">Settings</h1>
+    <a href data-toggle="modal" data-target="#user" >Create New User</a>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content customer">
+              <table class="row-border table table-striped table-bordered table-hover" >
+                    <thead>
+                        <tr role="row">
+                            <th style="width:20px;">Username</th>
+                            <th>User Type</th>
+                            <th>Full Name</th>
+                            <th style="text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="list in users">
+                          <td ng-bind="list.email"></td>
+                          <td ng-bind="list.user_type"></td>
+                          <td class="sorting_1">
+                              <a href ng-bind="list.firstname + list.lastname"></a>
+                          </td>
+                          <td style="text-align: center;">
+                              <a href ng-click="editUser(list)"><span class="label label-primary">Edit</span></a>
+                              <a href ng-click="deleteUser(list)"><span class="label label-danger">Remove</span></a>
+                              <a href ng-click="resetUser(list.id)"><span class="label label-danger">Reset</span></a>
+                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="page-header">Service Settings</h1>
+    <a href data-toggle="modal" data-target="#services" >Create New Service</a>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content customer">
+              <table class="row-border table table-striped table-bordered table-hover" >
+                    <thead>
+                        <tr role="row">
+                            <th>Service Name</th>
+                            <th style="text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="list in serviceList">
+                          <td ng-bind="list.service_name"></td>
+                          <td style="text-align: center;">
+                              <a href ng-click="editService(list)"><span class="label label-primary">Edit</span></a>
+                              <a href ng-click="deleteService(list)"><span class="label label-danger">Remove</span></a>
+                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="page-header">Manufacturer Settings</h1>
+    <a href data-toggle="modal" data-target="#manufacturer" >Create New Manufacturer</a>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content customer">
+              <table class="row-border table table-striped table-bordered table-hover" >
+                    <thead>
+                        <tr role="row">
+                            <th>Manufacturer Name</th>
+                            <th>Address</th>
+                            <th>Contact #</th>
+                            <th style="text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="list in manufacturerList">
+                          <td ng-bind="list.name"></td>
+                          <td ng-bind="list.address"></td>
+                          <td ng-bind="list.contact_no"></td>
+                          <td style="text-align: center;">
+                              <a href ng-click="editManufacturer(list)"><span class="label label-primary">Edit</span></a>
+                              <a href ng-click="deleteService(list)"><span class="label label-danger">Remove</span></a>
+                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create New User</h4>
+      </div>
+      <form ng-submit="createUser()">
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="email" ng-model="User.email" placeholder="Email" class="form-control" require>
+            <br />
+            <input type="password" ng-model="User.password" placeholder="Password" class="form-control" require>
+            <br />
+            <select class="form-control" ng-model="User.user_type" required placeholder="Select User Type">
+              <option selected disabled>--Select User Type--</option>
+              <option value="admin">Admin</option>
+              <option value="regular">Regular</option>
+              <option value="secretary">Secretary</option>
+              <option value="co-owner">Co-Owner</option>
+            </select>
+            <br />
+            <input type="text" ng-model="User.firstname" placeholder="First Name" class="form-control" require>
+            <br />
+            <input type="text" ng-model="User.lastname" placeholder="Last Name" class="form-control" require>
+            <br />
+            <input type="text" ng-model="User.contact" placeholder="Contact #" class="form-control" require>
+            <br />
+            <input type="text" ng-model="User.address" placeholder="Address" class="form-control" require>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary"> Add User</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="user-edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Update User</h4>
+      </div>
+      <form ng-submit="updateUser()">
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="email" ng-model="edit.email" placeholder="Email" class="form-control" require>
+            <br />
+            <select class="form-control" ng-model="edit.user_type" required placeholder="Select User Type">
+              <option selected disabled>--Select User Type--</option>
+              <option value="admin" ng-select="list.user_type == 'admin'">Admin</option>
+              <option value="regular" ng-select="list.user_type == 'regular">Regular</option>
+              <option value="secretary" ng-select="list.user_type == 'secretary'">Secretary</option>
+              <option value="co-owner" ng-select="list.user_type == 'co-owner'">Co-Owner</option>
+            </select>
+            <br />
+            <input type="text" ng-model="edit.firstname" placeholder="First Name" class="form-control" require>
+            <br />
+            <input type="text" ng-model="edit.lastname" placeholder="Last Name" class="form-control" require>
+            <br />
+            <input type="text" ng-model="edit.contact" placeholder="Contact #" class="form-control" require>
+            <br />
+            <input type="text" ng-model="edit.address" placeholder="Address" class="form-control" require>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary"> Update User</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="reset-success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <h3>User Password Reseted!</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal"> Done </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="services" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <form ng-submit="createService()">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Create Service</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+           <input type="text" ng-model="service.service_name" placeholder="Service Name" class="form-control">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary"> Add </button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="edit-services" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <form ng-submit="updateService()">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Update Service</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+           <input type="text" ng-model="edit_service.service_name" placeholder="Service Name" class="form-control">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary"> Update </button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="manufacturer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <form ng-submit="createManufacturer()">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Create Manufacturer</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+           <input type="text" ng-model="manufacturer.name" placeholder="Service Name" class="form-control">
+           <br />
+           <input type="text" ng-model="manufacturer.address" placeholder="Service Address" class="form-control">
+           <br />
+           <input type="text" ng-model="manufacturer.contact_no" placeholder="Service Contact #" class="form-control">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary"> Add </button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="edit-manufacturer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <form ng-submit="updateManufacturer()">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Update Manufacturer</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+           <input type="text" ng-model="edit_manufacturer.name" placeholder="Service Name" class="form-control">
+           <br />
+           <input type="text" ng-model="edit_manufacturer.address" placeholder="Service Address" class="form-control">
+           <br />
+           <input type="text" ng-model="edit_manufacturer.contact_no" placeholder="Service Contact #" class="form-control">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary"> Update </button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+

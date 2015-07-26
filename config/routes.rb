@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   get 'user_infos/index'
 
-  resources :categories, :manufacturers
+  resources :categories
+  resources :manufacturers, except: :show
   resources :users, except: :show
   resources :user_infos, except: :show 
   resources :inventories, except: :show
@@ -30,10 +31,13 @@ Rails.application.routes.draw do
       post '/estimations/submitEstimation' => 'estimations#submitEstimation'
       post '/estimations/saveServiceDetails' => 'estimations#saveServiceDetails'
       post '/estimations/savePartNeeds' => 'estimations#savePartNeeds'
+      post '/users/createUser' => 'users#createUser'
+      post '/services/createService' => 'services#createService'
+
       # get list
       get '/inventories/getInventoryStocks' => 'inventories#getInventoryStocks'
       get '/inventories/getProductOrderList' => 'inventories#getProductOrderList'
-      get '/inventories/getManufacturerList' => 'inventories#getManufacturerList'
+      get '/manufacturers/getManufacturerList' => 'manufacturers#getManufacturerList'
       get '/inventories/getDirectPurchases' => 'inventories#getDirectPurchases'
       get '/services/getServices' => 'services#getServices'
       get '/customers/getCustomerInfo' => 'customers#getCustomerInfo'
@@ -46,20 +50,24 @@ Rails.application.routes.draw do
       get '/job_orders/showJobOrder' => 'job_orders#showJobOrder'
       get '/job_orders/:id/jobDone' => 'job_orders#jobDone'
       get '/job_orders/:id/jobUnDone' => 'job_orders#jobUnDone'
+      get '/users/getUserInfo' => 'users#getUserInfo'
+
       #update routes
       post '/inventories/:id/updateInventoryStocks' => 'inventories#updateInventoryStocks'
       post '/inventories/:id/updateProductOrder' => 'inventories#updateProductOrder'
       post '/inventories/:id/updateDirectPurchase' => 'inventories#updateDirectPurchase'
-
+      post '/users/updateUser' => 'users#updateUser'
+      post '/services/:id/updateService' => 'services#updateService'
+      post '/manufacturers/:id/updateManufacturer' => 'manufacturers#updateManufacturer'
       # delete routes
       get '/inventories/:id/deleteProductOrder' => 'inventories#deleteProductOrder'
       get '/inventories/:id/deleteDirectPurchase' => 'inventories#deleteDirectPurchase'  
       get 'inventories/:id/deleteInventoryStock' => 'inventories#deleteInventoryStock'
+      get '/services/:id/deleteService' => 'services#deleteService'
+      get '/users/:id/deleteUser' => 'users#deleteUser'
+      get '/users/:id/resetUser' => 'users#resetUser'
+      get '/estimations/:id/deleteEstimation' => 'estimations#deleteEstimation'
       # end of on stock routes
-
-      # test
-      get '/users/getUserInfo' => 'users#getUserInfo'
-      # end of test
     end
 
     unauthenticated do

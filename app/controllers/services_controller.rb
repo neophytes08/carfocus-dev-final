@@ -12,4 +12,34 @@ class ServicesController < ApplicationController
 
     render json: serve, :status => "success"
   end
+
+  def createService
+    service = Service.create(service_name: params[:service_name])
+
+    if service.save
+      render :json => { :status => :ok, :message => "Success" }
+    else
+      render :json => { :status => :ok, :message => "Success" }
+    end
+  end
+
+  def updateService
+    service = Service.find_by(id: params[:id])
+
+    if service.update_attributes(service_name: params[:service_name])
+      render :json => { :status => :ok, :message => "Success" }
+    else
+      render :json => { :status => :error, :message => "Error" }
+    end
+  end
+
+  def deleteService
+    service = Service.find_by(id: params[:id])
+
+    if service.destroy
+      render :json => { :status => :ok, :message => "Success" }
+    else
+      render :json => { :status => :error, :message => "Error" }
+    end
+  end
 end

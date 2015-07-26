@@ -7,10 +7,14 @@ class EstimationsController < ApplicationController
     if params[:customer_exist] == true
       puts User.current_user
 
-      job = Estimation.create(user_id: current_user.id, customer_id: params[:id], car_model: params[:car_model], plate_no: params[:plate_no], color: params[:color], chasis_no: params[:chasis_no], engine_type: params[:engine_type], approved: false, job_status: false)
+      job = Estimation.create(user_id: current_user.id, customer_id: params[:id], car_model: params[:car_model], car_brand: params[:car_brand], plate_no: params[:plate_no], color: params[:color], chasis_no: params[:chasis_no], engine_type: params[:engine_type], approved: false, job_status: false)
       
       if job.save
-        logs = Log.create(action: " added a job order with customer");
+        payment = Payment.create(customer_id: params[:id], estimation_id: job.id, payment_method: "personal")
+        payment.save
+        customer = CustomerInfo.find_by(id: params[:id])
+
+        logs = Log.create(action: current_user.user_info.firstname.titleize + " added a job order with customer " + customer.fullname.titleize);
         logs.save
         render :json => { :status => :ok, :message => "Success" }
       else
@@ -20,11 +24,13 @@ class EstimationsController < ApplicationController
     elsif params[:customer_exist] == false
       customer_info = CustomerInfo.create(fullname: params[:fullname].downcase, address: params[:address], contact_no: params[:contact_no])
       customer_info.save
-      puts User.current_user
-      job = Estimation.create(user_id: current_user.id, customer_id: customer_info.id, car_model: params[:car_model], plate_no: params[:plate_no], color: params[:color], chasis_no: params[:chasis_no], engine_type: params[:engine_type], approved: false, job_status: false)
+
+      job = Estimation.create(user_id: current_user.id, customer_id: customer_info.id, car_model: params[:car_model], car_brand: params[:car_brand], plate_no: params[:plate_no], color: params[:color], chasis_no: params[:chasis_no], engine_type: params[:engine_type], approved: false, job_status: false)
           
       if job.save
-        logs = Log.create(action: " added a job order with customer");
+        payment = Payment.create(customer_id: customer_info.id, estimation_id: job.id, payment_method: "personal")
+        payment.save
+        logs = Log.create(action: current_user.user_info.firstname.titleize + " added a job order with customer " + customer_info.fullname.titleize);
         logs.save
         render :json => { :status => :ok, :message => "Success" }
       else
@@ -81,6 +87,16 @@ class EstimationsController < ApplicationController
     job = Estimation.find_by(id: params[:id])
 
     if job.update_attributes(:approved => true)
+      render :json => { :status => :ok, :message => "Success" }
+    else
+      render :json => { :status => :error, :message => "Error" }
+    end
+  end
+
+  def deleteEstimation
+    estimation = Estimation.find_by(id: params[:id])
+
+    if estimation.destroy
       render :json => { :status => :ok, :message => "Success" }
     else
       render :json => { :status => :error, :message => "Error" }

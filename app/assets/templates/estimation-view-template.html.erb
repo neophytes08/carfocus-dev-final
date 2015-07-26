@@ -14,8 +14,8 @@
                                     <th>Plate #</th>
                                     <th>Service/s</th>
                                     <th>Date Transaction</th>
-                                    <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary'%>
-                                    <th>Action</th>
+                                    <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary' %>
+                                    <th style="text-align: center;">Action</th>
                                     <% end %>
                                 </tr>
                             </thead>
@@ -26,10 +26,10 @@
                                     <td ng-bind="list.plate_no"></td>
                                     <td><a href ng-click="showServices(list.estimation_id)"> See Details </a></td>
                                     <td>{{list.created_at| cmdate:'yyyy-MM-dd'}}</td>
-                                    <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary'%>
+                                    <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary' %>
                                     <td>
                                         <a href><label class="label label-primary"><i class="fa fa-edit"></i> Edit</label></a>
-                                        <a href><label class="label label-danger"><i class="fa fa-trash"></i> Remove</label></a>
+                                        <a href ng-click="deleteEstimation(list)"><label class="label label-danger"><i class="fa fa-trash"></i> Remove</label></a>
                                         | <a href><label class="label label-info" ng-click="readyForJobOrder(list.estimation_id)"> Ready for Job Order</label></a>
                                     </td>
                                     <% end %>

@@ -47,6 +47,10 @@ app
             $rootScope.$broadcast('hide');
             $rootScope.$broadcast('show-joborder');
           }
+          scope.getSettings = function getSettings(){
+            $rootScope.$broadcast('hide');
+            $rootScope.$broadcast('show-settings');
+          }
         }
       }
     }
@@ -59,7 +63,7 @@ app
           "controller": "dashBoardCtrl",
           "templateUrl": "dashboard-template.html",
           "link": function onLink(scope, element, attributeSet){
-            // element.addClass("hidden");
+            element.addClass("hidden");
             console.log('oki')
             scope.$on('show-dashboard' , 
               function on(){
@@ -181,7 +185,7 @@ app
           "templateUrl": "estimation-add-template.html",
           "link": function onLink(scope, element, attributeSet){
           <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
-            element.addClass("hidden");
+            // element.addClass("hidden");
           <% end %>
             scope.$on('show-estimation-add' , 
               function on(){
@@ -280,6 +284,30 @@ app
         "link": function onLink(scope, element, attributeSet){
            element.addClass("hidden");
             scope.$on('show-joborder' , 
+              function on(){
+                element.removeClass("hidden");
+            
+              });
+
+            scope.$on('hide', 
+              function on(){
+                element.addClass("hidden");
+                
+              }); 
+        }
+      }
+    }
+  ])
+  .directive("settings", [
+    function directive(){
+      return {
+        "restrict": "A",
+        "scope": true,
+        "controller": "settingsCtrl",
+        "templateUrl": "settings.html",
+        "link": function onLink(scope, element, attributeSet){
+          element.addClass("hidden");
+            scope.$on('show-settings' , 
               function on(){
                 element.removeClass("hidden");
             

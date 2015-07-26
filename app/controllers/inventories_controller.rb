@@ -52,10 +52,6 @@ class InventoriesController < ApplicationController
   # end of on stock functions
 
   # for direct purchase functions
-  def getManufacturerList
-    manufacturer = Manufacturer.all.order("created_at asc")
-    render json: manufacturer, status: :ok
-  end
 
   def submitDirectPurchase
   inventory_data = Inventory.last

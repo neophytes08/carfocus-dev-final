@@ -57,7 +57,7 @@
                                 <th>Price</th>
                                 <th>Date</th>
                                 <th>Total</th>
-                                <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
+                                <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary' %>
                                     <th>Action</th>
                                 <% end %>
                             </tr>
@@ -71,7 +71,7 @@
                                 <td>P <span ng-bind="list.price"></span></td>
                                 <td>{{list.created_at| cmdate:'yyyy-MM-dd'}}</td>
                                 <td ng-init="list.total=list.quantity*list.price">P {{list.total}}</td>
-                                <% if User.current_user.user_type == 'admin'|| User.current_user.user_type == 'secretary'%>
+                                <% if User.current_user.user_type == 'admin' || User.current_user.user_type == 'secretary' %>
                                 <td>
                                     <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="displayProductInfo( list, 'edit' )"><span class="label label-primary">Edit</span></a>
                                     <a href ng-click="removeProduct(list,'on-stock')"><span class="label label-danger">Remove</span></a>

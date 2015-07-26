@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723084208) do
+ActiveRecord::Schema.define(version: 20150725104302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,6 +135,40 @@ ActiveRecord::Schema.define(version: 20150723084208) do
 
   add_index "part_needs", ["estimation_id"], name: "index_part_needs_on_estimation_id", using: :btree
   add_index "part_needs", ["stock_id"], name: "index_part_needs_on_stock_id", using: :btree
+
+  create_table "payment_insurances", force: :cascade do |t|
+    t.integer  "payment_id"
+    t.string   "company_name"
+    t.string   "insured_parts"
+    t.float    "amount"
+    t.boolean  "payment_status"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "payment_insurances", ["payment_id"], name: "index_payment_insurances_on_payment_id", using: :btree
+
+  create_table "payment_personals", force: :cascade do |t|
+    t.integer  "payment_id"
+    t.string   "payment_type"
+    t.float    "amount"
+    t.boolean  "payment_status"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "payment_personals", ["payment_id"], name: "index_payment_personals_on_payment_id", using: :btree
+
+  create_table "payments", force: :cascade do |t|
+    t.integer  "customer_id"
+    t.integer  "estimation_id"
+    t.string   "payment_method"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "payments", ["customer_id"], name: "index_payments_on_customer_id", using: :btree
+  add_index "payments", ["estimation_id"], name: "index_payments_on_estimation_id", using: :btree
 
   create_table "product_orders", force: :cascade do |t|
     t.integer  "stock_id"

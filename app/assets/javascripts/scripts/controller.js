@@ -10,12 +10,6 @@ app
       $scope.stockList = {};
       $scope.logList = {};
 
-      $scope.submitManufacturer = function submitManufacturer(){
-        CarServer.request("post", '/manufacturers/submitManufacturer',
-        function(response){
-        }, $scope.manufacturerData);
-      }
-
       $scope.getLatestInventory = function getLatestInventory(){
 
         CarServer.request("get", '/inventories/getLatestInventory',
@@ -171,8 +165,8 @@ app
       /* Display all inventory table Lists */
       $scope.$on( "show-inventory-view" , 
         function onReceive(){
-           $scope.displayOnStockList();
-      $scope.displayDirectPurchaseList();
+          $scope.displayOnStockList();
+          $scope.displayDirectPurchaseList();
       }); 
     }
   ])
@@ -224,7 +218,7 @@ app
 
       /*----- Get list of Manufacturers -----*/
       $scope.manufacturers = function manufacturers(){
-        CarServer.request("get", "/inventories/getManufacturerList",
+        CarServer.request("get", "/manufacturers/getManufacturerList",
         function(response){
           console.log( response );
           $scope.manufacturerList = response;
@@ -543,7 +537,7 @@ app
     "CarServer",
     function controller($scope, $http, CarServer)
     {
-      console.log("expenseViewCtrl");
+
       $scope.$on( "show-expense-view" , 
         function onReceive ( ) {
           
@@ -604,9 +598,10 @@ app
         $scope.userInfo.fullname = searchQuery.fullname;
         $scope.userInfo.contact_no = searchQuery.contact_no;
         $scope.userInfo.address = searchQuery.address;
-        $scope.jobOrderInfo.fullname = null;
-        $scope.jobOrderInfo.contact_no = null;
-        $scope.jobOrderInfo.address = null;
+
+        $scope.jobOrderInfo.fullname = searchQuery.fullname;
+        $scope.jobOrderInfo.contact_no = searchQuery.contact_no;
+        $scope.jobOrderInfo.address = searchQuery.address;
       }
       $scope.addCustomerInfoManually = function addCustomerInfoManually() {
         $scope.noCustomerExist = false;
@@ -616,6 +611,9 @@ app
         $scope.userInfo.fullname = '';
         $scope.userInfo.contact_no = '';
         $scope.userInfo.address = '';
+        $scope.jobOrderInfo.fullname = null;
+        $scope.jobOrderInfo.contact_no = null;
+        $scope.jobOrderInfo.address = null;
       }
       /*----- Add Payment Type -----*/
       $scope.setPaymentType = function setPaymentType( type ) {
@@ -623,7 +621,92 @@ app
       }
 
 
-      /*----- SUBMIT JOB ORDER -----*/
+      /* ----------------------------------------------------------------------------------------------- */
+      /* ----------------------------------------- PREVIEW ESTTIMATION --------------------------------- */ 
+      /* ----------------------------------------------------------------------------------------------- */
+      $scope.previewEstimation = function previewEstimation() {
+
+        console.log( '-----totalServiceAmountDetailPerBox-----' )
+        console.log( $scope.totalServiceAmountDetailPerBox );
+        console.log( '-----jobOrderInfo.job_details-----' )
+        console.log( $scope.jobOrderInfo.job_details );
+
+        var selectedServiceNames = [];
+        var totalBoxOutput = 0; 
+        $scope.totalPartAmount = 0;
+        $scope.totalEstimationAmount = 0;
+        var transaction_date = new Date();
+        transaction_date = transaction_date.toDateString() + " , " + transaction_date.toLocaleTimeString().replace(/:\d+ /, ' '); 
+        var getTotalServiceAmount = [];
+        var displayTotalBoxOutput = 0;
+        
+        console.log( $scope.partsLists );
+
+        for( x in $scope.partsLists ) {
+            $scope.totalPartAmount += ( $scope.partsLists[x].selectedAmountQuantity * $scope.partsLists[x].price );
+        }
+
+        for( x in $scope.selectedServices ) {
+
+            for( y in $scope.jobOrderInfo.job_details ) {
+                if ( $scope.selectedServices[x].service_id == $scope.jobOrderInfo.job_details[y].service_id ) {
+                    getTotalServiceAmount.push( 
+                      {
+                          boxID : $scope.jobOrderInfo.job_details[y].boxID,
+                          service_id : $scope.jobOrderInfo.job_details[y].service_id,
+                          perBox : $scope.jobOrderInfo.job_details[y].totalPerBox
+                      } 
+                    )
+                    // console.log( Math.max( $scope.jobOrderInfo.job_details[y].totalPerBox ) );
+                }
+                console.log( '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+' )
+                console.log( $scope.jobOrderInfo.job_details[y] );
+            }
+
+            for( z in getTotalServiceAmount ) {
+                // console.log( getTotalServiceAmount[z] );
+                if ( getTotalServiceAmount[z].service_id == $scope.selectedServices[x].service_id ) {
+                     displayTotalBoxOutput = Math.max( getTotalServiceAmount[z].perBox );
+                }else {
+                     displayTotalBoxOutput = getTotalServiceAmount[z].perBox;
+                }
+            }
+
+                // console.log( '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+' )
+                // console.log( displayTotalBoxOutput );
+
+            selectedServiceNames.push( 
+              { 
+                service_name : $scope.selectedServices[x].service_name , 
+                randomID : $scope.selectedServices[x].randomID , 
+                service_id : $scope.selectedServices[x].service_id,
+                boxTots :  displayTotalBoxOutput
+              } 
+            );
+        }
+
+        for( a in selectedServiceNames ) {
+            totalBoxOutput += selectedServiceNames[a].boxTots;
+        }
+        
+        $scope.totalEstimationAmount = totalBoxOutput + $scope.totalPartAmount;
+
+
+        // console.log( '---------boxTots-----------' )
+        // console.log( selectedServiceNames )
+        
+        $scope.jobOrderInfo.partsLists = $scope.partsLists;
+        $scope.jobOrderInfo.service_name = selectedServiceNames;
+        $scope.jobOrderInfo.transaction_date = transaction_date;
+          $( '#job-order-form-wrapper' ).fadeOut();
+          $( '#preview-estimation-wrapper' ).fadeIn();
+      }
+      /* ----------------------------------------- End: Preview Estimation ----------------------------- */ 
+
+
+      /* ----------------------------------------------------------------------------------------------- */
+      /* ----------------------------------------- SUBMIT JOB ORDER ------------------------------------ */ 
+      /* ----------------------------------------------------------------------------------------------- */
       $scope.submitJobOrder = function submitJobOrder() {
         var selectedServiceNames = [];
         var totalBoxOutput = 0; 
@@ -690,14 +773,13 @@ app
         $scope.finalEstimation  = {};
         $scope.finalJobDetails  = {};
         $scope.finalPartsNeeded = {};
-        /* ----------------------------------------------------------------------------------------------- */
-        /* ------------------------------ DATA TO BE SENT TO DATABASE ------------------------------------ */ 
-        /* ----------------------------------------------------------------------------------------------- */
+        /* ------------------------------ DATA TO BE SENT TO DATABASE ------------------------------------ */
         $scope.finalEstimation = {  
             'fullname'        : $scope.jobOrderInfo.fullname,
             'address'         : $scope.jobOrderInfo.address,
             'contact_no'      : $scope.jobOrderInfo.contact_no,
             'car_model'       : $scope.jobOrderInfo.car_model,
+            'car_brand'       : $scope.jobOrderInfo.car_brand,
             'chasis_no'       : $scope.jobOrderInfo.chasis_no,
             'color'           : $scope.jobOrderInfo.color,
             'engine_type'     : $scope.jobOrderInfo.engine_type,
@@ -729,20 +811,13 @@ app
 
           },$scope.finalEstimation);
 
-        
-        /* ----------------------------------------------------------------------------------------------- */
-        /* ----------------------------------------------------------------------------------------------- */
-
         console.log( $scope.jobOrderInfo );
-
-
-
-
 
         // console.log( $scope.partsLists );
         $( '#job-order-form-wrapper' ).fadeOut();
         $( '#preview-estimation-wrapper' ).fadeIn();
       }
+      /* ----------------------------------------- End: SUBMIT JOB ORDER ------------------------------- */ 
 
 
       /*----- BACK TO FORM -----*/
@@ -764,7 +839,7 @@ app
         $scope.selectedServices.push( pushedServices );
         console.log($scope.selectedServices);
         console.log(service);
-        $( 'option[label='+service.service_name+']' ).attr( 'disabled' , true );
+        $( 'option[label="'+service.service_name+'"]' ).attr( 'disabled' , true );
       }
 
       /*------ Remove Selected Service with alert box ( green ,red , yellow, blue) ------*/
@@ -779,7 +854,7 @@ app
         for( x in $scope.selectedServices ) { // Loop for Service Box 
           if( $scope.selectedServices[x].randomID == service.randomID ){
             $scope.selectedServices.splice(x,1);
-            $( 'option[label='+service.service_name+']' ).removeAttr( 'disabled' );
+            $( 'option[label="'+service.service_name+'"]' ).removeAttr( 'disabled' );
           }
         }
 
@@ -791,7 +866,7 @@ app
             console.log( '--------else---------' );
             console.log( localStoredServices[z] );
             setNewValue.push({
-              'service_id' : service.id,
+              'service_id' : localStoredServices[z].service_id,
               'boxID' : localStoredServices[z].boxID,
               'totalBoxAmount' : localStoredServices[z].totalBoxAmount,
               'serviceAmount' : localStoredServices[z].serviceAmount
@@ -835,6 +910,7 @@ app
         // console.log( boxTotal );
 
         $scope.totalServiceAmountDetailPerBox = $scope.totalServiceAmountDetailPerBox + addedValue;
+
 
         $scope.serviceDetails = {};
         $('#modal-add-service-detail').modal('hide');
@@ -894,6 +970,19 @@ app
 
       }  
 
+      $scope.PreviewCalculateTotalAmount = function PreviewCalculateTotalAmount( price, quantity, index, id, part ) {
+        if ( $scope.singlePartAmount ) {
+          $scope.singlePartAmount[id] = price * quantity;
+
+          for( x in $scope.partsLists ) {
+            if ( $scope.partsLists[x].id == id ) {
+                $scope.partsLists[x].selectedAmountQuantity = quantity;
+            }
+          }
+
+        }
+      }
+
       // console.log( $scope.partsLists ); 
 
 
@@ -910,12 +999,12 @@ app
       });
 
 
-      $scope.$on( "show-estimation-add" , 
-        function onReceive ( ) {
+      // $scope.$on( "show-estimation-add" , 
+      //   function onReceive ( ) {
           $scope.getServices();
           $scope.getExistingCustomer();
-          $scope.getAvailableStockList
-        });
+          $scope.getInventoryLists();
+        // });
     }
   ])
   .controller('estimationViewCtrl', [
@@ -953,6 +1042,19 @@ app
             $scope.getEstimationList();
           });
       }
+
+      // delete estimation
+      $scope.deleteEstimation = function deleteEstimation(list){
+
+        console.log(list);
+        CarServer.request("get", "/estimations/" + list.estimation_id + "/deleteEstimation",
+          function(response){
+            $scope.estimationList.splice($scope.estimationList.indexOf(list), 1);
+          });
+      }
+
+      $scope.getEstimationList();
+
       $scope.$on( "show-estimation-view" , 
         function onReceive ( ) {
             $scope.getEstimationList();
@@ -1000,11 +1102,6 @@ app
           });
       }
 
-      $scope.$on("show-joborder",
-        function onReceive(){
-          $scope.getJobOrder();
-        });
-
       // show services
       $scope.showServices = function showServices(list){
         console.log(list);
@@ -1029,5 +1126,166 @@ app
             $scope.getJobOrder();
           });
       }
+
+      // delete estimation
+      $scope.deleteEstimation = function deleteEstimation(list){
+
+        console.log(list);
+        CarServer.request("get", "/estimations/" + list.estimation_id + "/deleteEstimation",
+          function(response){
+            $scope.jobOrderList.splice($scope.jobOrderList.indexOf(list), 1);
+          });
+      }
+
+
+      $scope.$on("show-joborder",
+        function onReceive(){
+          $scope.getJobOrder();
+      });
     }
-  ]);
+  ])
+.controller("settingsCtrl", [
+  "$scope",
+  "$http",
+  "CarServer",
+  function controller($scope, $http, CarServer){
+
+    $scope.users = {};
+    $scope.User = {};
+    $scope.edit = {};
+    $scope.serviceList = {};
+    $scope.service = {};
+    $scope.edit_service = {};
+    $scope.manufacturerList = {};
+    $scope.manufacturer = {};
+    $scope.edit_manufacturer = {};
+
+    $scope.getUser = function getUser(){
+      CarServer.request("get", "/users/getUserInfo",
+        function(response){
+          console.log(response);
+          $scope.users = response;
+        });
+    }
+
+    $scope.createUser = function createUser(){
+
+      CarServer.request("post", "/users/createUser",
+        function(response){
+          $scope.getUser();
+          $("#user").modal('hide');
+        }, $scope.User);
+    }
+
+    $scope.deleteUser = function deleteUser(list){
+
+      CarServer.request("get", '/users/' + list.id + '/deleteUser',
+        function(response){
+           $scope.users.splice($scope.users.indexOf(list) , 1)
+        });
+    }
+
+    $scope.resetUser = function resetUser(list){
+
+      CarServer.request("get", '/users/' + list + '/resetUser',
+        function(response){
+          $("#reset-success").modal('show');
+        });
+    }
+
+    $scope.editUser = function editUser(list){
+      $scope.edit = list;
+      $("#user-edit").modal('show');
+    }
+
+    $scope.updateUser = function updateUser(){
+      CarServer.request("post", '/users/updateUser',
+        function(response){
+          $("#user-edit").modal('hide');
+          $scope.getUser();
+        }, $scope.edit);
+    }
+
+    // get services
+    $scope.getServices = function getServices(){
+      CarServer.request("get", "/services/getServices",
+      function(response){
+        $scope.serviceList = response;
+      });
+    }
+    
+    // save service
+    $scope.createService = function createService(){
+      CarServer.request("post", '/services/createService',
+        function(response){
+          $scope.getServices();
+          $("#services").modal('hide');
+        }, $scope.service);
+    }
+
+    // edit service
+    $scope.editService = function editService(list){
+      $scope.edit_service = list;
+      $("#edit-services").modal('show');
+    }
+
+    // update service
+    $scope.updateService = function updateService(){
+
+      CarServer.request("post", '/services/' + $scope.edit_service.id + '/updateService',
+        function(response){
+          $scope.getServices();
+          $("#edit-services").modal('hide');
+        }, $scope.edit_service);
+    }
+
+    // delete service
+    $scope.deleteService = function deleteService(list){
+
+      CarServer.request("get", '/services/' + list.id + '/deleteService',
+        function(response){
+          $scope.serviceList.splice($scope.serviceList.indexOf(list), 1);
+        });
+    }
+    
+    // get manufacturer list
+    $scope.getManufacturerList = function getManufacturerList(){
+
+      CarServer.request("get", "/manufacturers/getManufacturerList",
+        function(response){
+          $scope.manufacturerList = response;
+        });
+    }
+
+    // create manufacturer
+    $scope.createManufacturer = function createManufacturer(){
+      CarServer.request("post", '/manufacturers/submitManufacturer',
+        function(response){
+          $scope.getManufacturerList();
+          $("#manufacturer").modal('hide');
+        }, $scope.manufacturer);
+    }
+
+    // edit manufacturer
+    $scope.editManufacturer = function editManufacturer(list){
+      $scope.edit_manufacturer = list;
+      $("#edit-manufacturer").modal('show');
+    }
+
+    // update manufacturer
+    $scope.updateManufacturer = function updateManufacturer(){
+      CarServer.request("post", '/manufacturers/' + $scope.edit_manufacturer.id + '/updateManufacturer',
+        function(response){
+          $scope.getManufacturerList();
+          $('#edit-manufacturer').modal('hide');
+        }, $scope.edit_manufacturer);
+    }
+
+    $scope.$on("show-settings",
+        function onReceive(){
+          $scope.getUser();
+          $scope.getServices();
+          $scope.getManufacturerList();
+    });
+  }
+]);

@@ -1,3 +1,4 @@
 class ServiceDetail < ActiveRecord::Base
   belongs_to :service
+  belongs_to :estimation
 end
